@@ -55,6 +55,7 @@
             display: hidden;
             top: -400px;
         }
+        
     </style>
 </head>
 
@@ -62,26 +63,38 @@
     <div class="bg-[#2a2a2a]">
         <!-- bg-gradient-to-r from-purple-500 via-indigo-500 to-purple-500 -->
         <div class=" ">
-            <nav
-                class=" sticky top-0 z-50 flex items-center justify-between pt-[14px] pb-3 px-16 bg-black/20 backdrop-blur-md hover:backdrop-blur-xl">
-                <p class=" font-semibold text-blue-400 p-0 text-[34px]">
+            <nav class="relative sticky top-0 z-50 flex items-center justify-between pt-[8px] md:pt-[14px] pb-2 md:pb-3 px-4 md:px-16 bg-black/20 backdrop-blur-md hover:backdrop-blur-xl">
+                <p class="font-semibold text-blue-400 p-0 text-[32px] md:text-[34px]">
                     DS
                 </p>
-                <ul class="flex space-x-12 py-2 pl-2 pr-2 rounded-full font-semibold text-white text-[16px]">
-                    <li
-                        class=" font-normal hover:underline underline-offset-8 decoration-2 decoration-blue-500 cursor-pointer pt-2 pb-2 rounded-full">
+                <div class="sm:hidden md:hidden flex items-center space-x-4">
+                    <!-- Hamburger Icon -->
+                    <button id="menu-toggle" class="text-white hover:text-gray-300 focus:outline-none">
+                        <!-- SVG for Hamburger Icon -->
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 absolute right-5 top-5">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M3 5h18v1H3V5zm0 7h18v1H3v-1zm0 7h18v1H3v-1z" />
+                        </svg>
+                    </button>
+                    <!-- X Icon (Initially Hidden) -->
+                    <button id="menu-close" class="text-white hover:text-gray-300 focus:outline-none hidden">
+                        <!-- SVG for X Icon -->
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 absolute right-5 top-5">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                </div>
+                <ul id="nav-links"
+                    class="hidden sm:flex md:flex sm:space-x-6 md:space-x-12 py-2 pl-2 pr-2 rounded-full font-semibold text-white text-[16px]">
+                    <li class="font-normal hover:underline underline-offset-8 decoration-2 decoration-blue-500 cursor-pointer pt-2 pb-2 rounded-full">
                         <a href="#" id="home">Home</a>
                     </li>
-                    <li
-                        class=" font-normal hover:underline underline-offset-8 decoration-2 decoration-blue-500 cursor-pointer pt-2 pb-2 rounded-full">
+                    <li class="font-normal hover:underline underline-offset-8 decoration-2 decoration-blue-500 cursor-pointer pt-2 pb-2 rounded-full">
                         <a href="#about">About me</a>
                     </li>
-                    <li
-                        class=" font-normal hover:underline underline-offset-8 decoration-2 decoration-blue-500 cursor-pointer pt-2 pb-2 rounded-full">
+                    <li class="font-normal hover:underline underline-offset-8 decoration-2 decoration-blue-500 cursor-pointer pt-2 pb-2 rounded-full">
                         <a href="#projects">Projects</a>
                     </li>
-                    <li
-                        class=" font-normal hover:underline underline-offset-8 decoration-2 decoration-blue-500 cursor-pointer pt-2 pb-2 rounded-full">
+                    <li class="font-normal hover:underline underline-offset-8 decoration-2 decoration-blue-500 cursor-pointer pt-2 pb-2 rounded-full">
                         <a href="#contact">Contact</a>
                     </li>
                     <a href="/Dheenu_S_Resume.pdf" download="Dheenu_Resume">
@@ -92,18 +105,19 @@
                     </a>
                 </ul>
             </nav>
-            <div class="h-screen mt-[-110px] text-center flex gap-40 justify-center items-center text-white ">
-                <div class="text-start">
-                    <div class="w-[580px] gap-y-[-10px] text-start">
-                        <h2 class=" text-gray-100 font-semibold text-[16px]">
+            
+            <div class=" md:h-screen md:mt-[-110px] text-center md:flex md:gap-40 justify-center items-center text-white ">
+                <div class=" text-start mt-[20px] px-4">
+                    <div class="md:w-[580px] gap-y-[-10px] text-start">
+                        <h2 class=" text-gray-100 font-semibold text-[14px] md:text-[16px]">
                             Hello, my name is
                         </h2>
-                        <h2 class=" text-gray-100 font-semibold text-[52px]">DHEENU S
+                        <h2 class=" text-gray-100 font-semibold text-[32px] md:text-[52px]">DHEENU S
                         </h2>
-                        <h3 class=" text-blue-400 font-semibold text-[28px] mb-2">
+                        <h3 class=" text-blue-400 font-semibold text-[18px] md:text-[28px] mb-2">
                             Web Designer
                         </h3>
-                        <p class=" text-gray-200 font-noraml text-[16px]">
+                        <p class=" text-gray-200 font-noraml text-[16px] md:text-[16px]">
                             Welcome to my portfolio! I'm Dheenu from siruvangur, TamilNadu. I'm a skilled and creative
                             we designer with
                             a passion for creating beautiful, responsive, and user-friendly web designs. This Portfolio
@@ -113,17 +127,17 @@
                         <div class="flex mt-5 space-x-4">
                             <a href="https://github.com/DheenuS" target="_blank" rel="noopener noreferrer">
                                 <img src="Images/github (2).png"
-                                    class="icons p-[6px] w-[40px] h-[40px] bg-white rounded-md">
+                                    class="icons p-[6px] w-[32px] h-[32px] md:w-[40px] md:h-[40px] bg-white rounded-md">
                                 </img>
                             </a>
                             <a href="https://www.linkedin.com/in/dheenus" target="_blank" rel="noopener noreferrer">
                                 <img src="Images/linkedin.png"
-                                    class=" icons p-[6px] w-[40px] h-[40px] bg-white rounded-md">
+                                    class=" icons p-[6px] w-[32px] h-[32px] md:w-[40px] md:h-[40px] bg-white rounded-md">
                                 </img>
                             </a>
                             <a href="https://wa.me/919345550559" target="_blank" rel="noopener noreferrer">
                                 <img src="Images/whatsapp.png"
-                                    class=" icons p-[6px] w-[40px] h-[40px] bg-white rounded-md">
+                                    class=" icons p-[6px] w-[32px] h-[32px] md:w-[40px] md:h-[40px] bg-white rounded-md">
                                 </img>
                             </a>
                         </div>
@@ -131,199 +145,150 @@
                     <div class="absolute flex justify-start">
                         <a href="#about" class="">
                             <button
-                                class=" outline outline-offset-4 outline-blue-500 flex gap-2 justify-center items-center font-normal text-[18px] rounded-md mt-14 py-2 px-4 cursor-pointer bg-[#2a2a2a] text-white ">
+                                class=" outline outline-offset-4 outline-blue-500 flex gap-2 justify-center items-center font-normal text-[16px] md:text-[18px] md:rounded-md rounded-sm mt-8 md:mt-14 py-1 px-2 md:py-2 md:px-4 cursor-pointer bg-[#2a2a2a] text-white ">
                                 More about me
                                 <img src="Images/down_arrow.png" alt="arrow.png"
-                                    class=" relative top-1 w-[22px] h-[22px] animate-bounce">
+                                    class=" relative top-1 w-[20px] md:w-[22px] h-[20px] md:h-[22px] animate-bounce">
                             </button>
                         </a>
                     </div>
                 </div>
-                <div class="flex justify-center mt-24 ">
+                <div class=" hidden lg:block flex justify-center mt-28">
                     <img src="Images/dheencolored.jpeg" alt="dheen.jpg"
-                        class=" dheen rounded-full w-[440px] h-[440px] border-4 border-blue-400"></img>
+                        class=" dheen rounded-full w-[200px] h-[200px] md:w-[440px] md:h-[440px] border-2 md:border-4 border-blue-400 "></img>
                 </div>
             </div>
-            <div id="about" class="bg-[#2a2a2a] px-36 flex flex-col items-center justify-center">
-                <h3 class=" text-gray-100 text-center font-semibold text-[36px] pb-10 mt-24 ">About me</h3>
-                <div class=" flex space-x-10 bg-[#2a2a2a] p-4 rounded-lg">
-                    <div class=" flex justify-center">
-                        <img src="Images/dheencolored.jpeg" alt="dheen.jpg"
-                            class=" rounded-md w-[480px] h-auto outline outline-offset-8 outline-blue-500"></img>
+            <div id="about" class="px-4 md:px-8 lg:px-16 xl:px-36 py-8 md:py-12 lg:py-16 flex flex-col items-center justify-center mt-16">
+                <h3 class="text-gray-100 text-center font-semibold text-[26px] md:text-[36px] pb-4 md:pb-8 md:pt-4">About me</h3>
+                <div class=" md:space-x-20 flex flex-col md:justify-center md:items-start md:flex-row rounded-lg overflow-hidden">
+                    <div class="md:w-[510px] p-2 md:p-4">
+                        <img src="Images/dheencolored.jpeg" alt="dheen.jpg" class="w-full md:max-w-[510px] h-auto outline outline-offset-4 outline-blue-500 rounded-md"></img>
                     </div>
-                    <div class=" w-[700px] h-auto text-justify text-gray-50 text-[16px] space-y-4">
-                        <h5 class="indent-12">Hey there, I'm Dheenu, a web designer with a passion for creating awesome
-                            digital
-                            experiences. I
-                            pay close attention to the details and love getting creative to turn ideas into reality with
-                            fresh design solutions.
-                        </h5>
-                        <h5>
-                            My journey into web design started with a fascination for blending art and tech. I've got a
-                            Master's in Computer Application and have sharpened my skills to create designs that connect
-                            with people on different platforms.
-                        </h5>
-                        <h5>
-                            I focus on making websites that not only look great but also offer a smooth user experience.
-                            I'm
-                            skilled in HTML, CSS, Tailwind CSS, and Figma, and I'm always learning to keep up with the
-                            ever-changing digital world.
-                        </h5>
-                        <h5>
-                            Whether it's crafting sleek interfaces or making user journeys seamless, I'm all about
-                            delivering top-notch work. Check out my portfolio to see some of my projects that push
-                            boundaries and exceed expectations. I believe in finding balance and drawing inspiration
-                            from various experiences to fuel my creativity. Ready to take your online presence to the
-                            next
-                            level?
-                            <h5>
-                                Let's work together! Whether you're starting from scratch or revamping an existing site,
-                                I'm
-                                here to bring your vision to life.
-                            </h5>
-                        </h5>
+                    <div class="md:w-1/2 p-2 md:p-2 text-justify">
+                        <p class="text-gray-200 text-[16px] leading-relaxed mb-4 md:mb-6">
+                            Hey there, I'm Dheenu, a web designer with a passion for creating awesome digital experiences. I pay close attention to the details and love getting creative to turn ideas into reality with fresh design solutions.
+                        </p>
+                        <p class="text-gray-200 text-[16px] leading-relaxed mb-4 md:mb-6">
+                            My journey into web design started with a fascination for blending art and tech. I've got a Master's in Computer Application and have sharpened my skills to create designs that connect with people on different platforms.
+                        </p>
+                        <p class="text-gray-200 text-[16px] leading-relaxed mb-4 md:mb-6">
+                            I focus on making websites that not only look great but also offer a smooth user experience. I'm skilled in HTML, CSS, Tailwind CSS, and Figma, and I'm always learning to keep up with the ever-changing digital world.
+                        </p>
+                        <p class="text-gray-200 text-[16px] leading-relaxed mb-4 md:mb-6">
+                            Whether it's crafting sleek interfaces or making user journeys seamless, I'm all about delivering top-notch work. Check out my portfolio to see some of my projects that push boundaries and exceed expectations. I believe in finding balance and drawing inspiration from various experiences to fuel my creativity. Ready to take your online presence to the next level? Let's work together! Whether you're starting from scratch or revamping an existing site, I'm here to bring your vision to life.
+                        </p>
                     </div>
                 </div>
             </div>
+            
             <!-- Skills -->
-            <h3 class=" text-gray-100 text-center font-semibold text-[36px] pb-16 mt-24">Designing Skills</h3>
+            <h3 class=" text-gray-100 text-center font-semibold text-[26px] md:text-[36px] pb-8 md:pb-16 mt-0 md:mt-24">Designing Skills</h3>
             <div class=" flex flex-col justify-center items-center">
-                <div class=" flex justify-between items-center gap-28">
-                    <div class="flex flex-col items-center space-y-6">
+                <div class=" md:flex flex-col justify-between items-center gap-28">
+                    <div class="flex flex-col items-center space-y-2 md:space-y-6">
                         <div
                             class=" flex items-center bg-gray-100 p-6 w-[140px] h-[140px] rounded-full shadow-lg shadow-gray-600 ">
                             <img src="Images/html.png" class=""></img>
                         </div>
-                        <p class="text-white font-semibold text-[18px]">HTML</p>
+                        <p class="text-white font-semibold text-[16px] md:text-[18px]">HTML</p>
                     </div>
-                    <div class="flex flex-col items-center space-y-6">
+                    <div class="flex flex-col mt-6 items-center space-y-2 md:space-y-6">
                         <div
                             class=" flex items-center bg-gray-100 p-6 w-[140px] h-[140px] rounded-full shadow-lg shadow-gray-600 ">
                             <img src="Images/css.png" class="pl-2 w-[84px] h-[92px]"></img>
                         </div>
-                        <p class="text-white font-semibold text-[18px]">CSS</p>
+                        <p class="text-white font-semibold text-[16px] md:text-[18px]">CSS</p>
                     </div>
-                    <div class="flex flex-col items-center space-y-6">
+                    <div class="flex flex-col mt-6 items-center space-y-2 md:space-y-6">
                         <div
                             class=" flex items-center bg-gray-100 p-6 rounded-full w-[140px] h-[140px] shadow-lg shadow-gray-600 ">
                             <img src="Images/tailwindcss.svg" class=""></img>
                         </div>
-                        <p class="text-white font-semibold text-[18px]">Tailwind CSS</p>
+                        <p class="text-white font-semibold text-[16px] md:text-[18px]">Tailwind CSS</p>
                     </div>
-                    <div class="flex flex-col items-center space-y-6">
+                    <div class="flex flex-col mt-6 items-center space-y-2 md:space-y-6">
                         <div
                             class=" flex items-center bg-gray-100 p-6 rounded-full w-[140px] h-[140px] shadow-lg shadow-gray-600 ">
                             <img src="Images/figma.png" class="rounded-lg"></img>
                         </div>
-                        <p class="text-white font-semibold text-[18px]">Figma</p>
+                        <p class="text-white font-semibold text-[16px] md:text-[18px]">Figma</p>
                     </div>
                 </div>
             </div>
             <!-- Projects -->
-            <div id="projects" class="bg-[#2a2a2a] pt-0 px-36">
-                <h3 class=" text-gray-100 text-center font-semibold text-[36px] mt-24">Projects</h3>
-                <p class="text-center text-[20px] text-gray-100 pb-16">Here are my few accomplished projects</p>
-                <div class=" bg-white flex flex-col py-6 mb-10 rounded-md">
-                    <div class="flex justify-center items-center space-x-16">
-                        <div
-                            class=" relative w-[340px] h-[400px] rounded-md bg-black hover:cursor-pointer hover:outline outline-offset-2 outline-gray-500 overflow-hidden">
-                            <img src="Images/portfolio_image.png" alt="portfolio"
-                                class=" imgport w-full h-full transform hover:scale-105 opacity-30 transition-opacity duration-500 hover:opacity-100">
-                            <div class="hover:bg-black">
-                                <p
-                                    class="absolute top-[18px] left-4 transition-all duration-300 text-white font-semibold text-[16px]">
-                                    <span class="px-4 py-2 bg-blue-500 rounded-sm text-white font-semibold text-[18px]">
-                                        DS portfolio</span>
-                                </p>
-                            </div>
-                            <a href="https://github.com/DheenuS/Dheenu-Portfolio" target="_blank">
-                                <button
-                                    class=" absolute bottom-2 right-2 px-4 py-2 rounded-sm bg-white hover:text-white hover:bg-blue-500 text-[16px] font-semibold text-black z-40">
-                                    Visit Now
-                                </button>
-                            </a>
+            <div id="projects" class="bg-[#2a2a2a] px-4 md:px-8 lg:px-36">
+                <h3 class="text-gray-100 text-center font-semibold mt-10 text-[26px] md:text-[36px] md:mt-24">Projects</h3>
+                <p class="text-center text-[16px] md:text-[20px] text-gray-100 pb-8 md:pb-16">Here are my few accomplished projects</p>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="relative mx-auto bg-black rounded-md hover:outline outline-offset-4 outline-blue-500 overflow-hidden">
+                        <img src="Images/portfolio_image.png" alt="portfolio" class="w-full h-full transform hover:scale-105 opacity-30 transition-opacity duration-500 hover:opacity-100">
+                        <div class="hover:bg-black flex justify-center items-center">
+                            <p class="absolute top-6 left-6 font-semibold text-[16px] px-3 py-2 bg-blue-500 rounded-sm">DS portfolio</p>
                         </div>
-                        <div
-                            class=" relative w-[340px] h-[400px] rounded-md bg-black hover:cursor-pointer hover:outline outline-offset-2 outline-gray-500 overflow-hidden">
-                            <img src="Images/hotel.png" alt="portfolio"
-                                class=" imgport w-full h-full transform hover:scale-105 opacity-30 transition-opacity duration-500 hover:opacity-100">
-                            <div class="hover:bg-black">
-                                <p
-                                    class="absolute top-[18px] left-4 transition-all duration-300 text-white font-semibold text-[16px]">
-                                    <span class="px-4 py-2 bg-blue-500 rounded-sm text-white font-semibold text-[18px]">
-                                        Hotel Management System</span>
-                                </p>
-                            </div>
-                            <a href="https://github.com/DheenuS/Hotel-Dheen/tree/main/Project%20Images" target="_blank">
-                                <button
-                                    class=" absolute bottom-2 right-2 px-4 py-2 rounded-sm bg-white hover:text-white hover:bg-blue-500 text-[16px] font-semibold text-black z-40">
-                                    Visit Now
-                                </button>
-                            </a>
-                        </div>
-                        <div
-                            class=" relative w-[340px] h-[400px] rounded-md bg-black hover:cursor-pointer hover:outline outline-offset-2 outline-gray-500 overflow-hidden">
-                            <img src="Images/voice.png" alt="portfolio"
-                                class=" imgport w-full h-full transform hover:scale-105 opacity-30 transition-opacity duration-500 hover:opacity-100">
-                            <div class="hover:bg-black">
-                                <p
-                                    class="absolute top-[18px] left-4 transition-all duration-300 text-white font-semibold text-[16px]">
-                                    <span class="px-4 py-2 bg-blue-500 rounded-sm text-white font-semibold text-[18px]">
-                                        Voice Speech Synthesis</span>
-                                </p>
-                            </div>
-                            <a href="https://github.com/DheenuS/Voice" target="_blank">
-                                <button
-                                    class=" absolute bottom-2 right-2 px-4 py-2 rounded-sm bg-white hover:text-white hover:bg-blue-500 text-[16px] font-semibold text-black z-40">
-                                    Visit Now
-                                </button>
-                            </a>
-                        </div>
+                        <a href="https://dheenus.github.io/portfolio/" target="_blank" class="absolute bottom-2 right-2 px-2 md:px-4 md:py-2 py-1 rounded-sm bg-white hover:text-white hover:bg-blue-500 text-[15px] font-semibold text-black hover:cursor-pointer z-40">Visit Now</a>
                     </div>
+                    <div class=" relative mx-auto bg-black rounded-md hover:outline outline-offset-4 outline-blue-500 overflow-hidden">
+                        <img src="Images/hotel.png" alt="portfolio" class="w-full h-full transform hover:scale-105 opacity-30 transition-opacity duration-500 hover:opacity-100">
+                        <div class=" hover:bg-black flex justify-center items-center">
+                            <p class=" absolute top-5 left-6 text-black font-semibold text-[16px] px-3 py-2 bg-blue-500 rounded-sm">Hotel Management System</p>
+                        </div>
+                        <a href="https://dheenus.github.io/portfolio/" target="_blank" class="absolute bottom-2 right-2 px-2 md:px-4 md:py-2 py-1 rounded-sm bg-white hover:text-white hover:bg-blue-500 text-[15px] font-semibold text-black hover:cursor-pointer z-40">Visit Now</a>
+                    </div>
+                    <div class="relative mx-auto bg-black rounded-md hover:outline outline-offset-4 outline-blue-500 overflow-hidden">
+                        <img src="Images/voice.png" alt="portfolio" class="w-full h-full transform hover:scale-105 opacity-30 transition-opacity duration-500 hover:opacity-100">
+                        <div class="hover:bg-black flex justify-center items-center">
+                            <p class=" absolute top-6 left-6 text-black font-semibold text-[16px] px-3 py-2 bg-blue-500 rounded-sm">Voice Speech Synthesis</p>
+                        </div>
+                        <a href="https://dheenus.github.io/portfolio/" target="_blank" class="absolute bottom-2 right-2 px-2 md:px-4 md:py-2 py-1 rounded-sm bg-white hover:text-white hover:bg-blue-500 text-[15px] font-semibold text-black hover:cursor-pointer z-40">Visit Now</a>
+                    </div>
+                    <!-- Repeat this block for other projects -->
                 </div>
+            </div>
+            
+                
                 <!-- contact -->
-                <div class="static bottom-0 flex flex-col-3 justify-between items-start text-gray-100 pb-10 mt-24 px-4">
-                    <div class=" flex flex-col hover:text-gray-200">
-                        <h4 class=" font-semibold text-[28px] hover:text-gray-200 mb-4">Get in Touch</h4>
-                        <h5 class=" text-white text-[16px] hover:text-gray-200 font-noraml">Dheenu S</h5>
+                <div class="static bottom-0 md:flex flex-col-3 md:justify-between items-start text-gray-100 pb-10 mt-8 md:mt-24 px-2 md:px-36">
+                    <div class=" flex flex-col hover:text-gray-200 mb-6 px-2 ">
+                        <h4 class=" font-semibold text-[22px] md:text-[28px] hover:text-gray-200 mb-4 md:mb-4">Get in Touch</h4>
+                        <h5 class=" text-white text-[16px] md:text-[16px] hover:text-gray-200 font-noraml">Dheenu S</h5>
                         <a href="tel:+919345550559">
-                            <h5 class=" text-white text-[16px] hover:text-gray-200 font-noraml">9345550559</h5>
+                            <h5 class=" text-white text-[16px] md:text-[16px] hover:text-gray-200 font-noraml">9345550559</h5>
                         </a>
                         <a href="mailto:email@gmail.com">
-                            <h5 class=" text-white text-[16px] hover:text-gray-200 font-noraml">dheendheenu777@gmail.com
+                            <h5 class=" text-white text-[16px] md:text-[16px] hover:text-gray-200 font-noraml">dheendheenu777@gmail.com
                             </h5>
                         </a>
                     </div>
-                    <div class=" flex flex-col">
-                        <h4 class=" font-semibold mb-4 text-[28px] hover:text-gray-200">Stay Connected</h4>
+                    <div class=" flex flex-col mb-6 px-2">
+                        <h4 class=" font-semibold mb-4 md:mb-4 text-[22px] md:text-[28px] hover:text-gray-200">Stay Connected</h4>
                         <a href="https://www.linkedin.com/in/dheenus" target="_blank" rel="noopener noreferrer"
-                            class=" hover:text-blue-400 hover:cursor-pointer text-[16px]">LinkedIn</a>
+                            class=" hover:text-blue-400 hover:cursor-pointer text-[16px] md:text-[16px]">LinkedIn</a>
                         <a href="https://github.com/DheenuS" target="_blank" rel="noopener noreferrer"
-                            class=" hover:text-blue-400 hover:cursor-pointer text-[16px]">Github</a>
+                            class=" hover:text-blue-400 hover:cursor-pointer text-[16px] md:text-[16px]">Github</a>
                         <a href="https://wa.me/919345550559" target="_blank" rel="noopener noreferrer"
-                            class=" hover:text-blue-400 hover:cursor-pointer text-[16px]">WhatsApp</a>
+                            class=" hover:text-blue-400 hover:cursor-pointer text-[16px] md:text-[16px]">WhatsApp</a>
                     </div>
                     <div class="" id="contact">
                         <div class="">
-                            <form class="flex flex-col gap-y-2">
-                                <p class=" text-[16px] font-medium">
-                                    Name <span class=" text-red-500 text-[18px]">*</span>
+                            <form class="flex flex-col gap-y-2 md:gap-y-2 px-2">
+                                <p class=" font-medium">
+                                    Name <span class=" text-red-500 text-[16px]">*</span>
                                 </p>
                                 <input type="text"
                                     class=" opacity-50 focus:outline-none pl-3 pr-44 py-2 text-black bg-gray-100 rounded-md"
                                     required></input>
-                                <p class=" text-[16px] font-medium">
-                                    Email <span class=" text-red-500 text-[18px]">*</span>
+                                <p class=" font-medium">
+                                    Email <span class=" text-red-500 text-[16px]">*</span>
                                 </p>
                                 <input type="email"
                                     class=" opacity-50 focus:outline-none pl-3 pr-44 py-2 text-black bg-gray-100 rounded-md "
                                     name="email" id="" required></input>
-                                <p class=" text-[16px] font-medium">
-                                    Message <span class=" text-red-500 text-[18px]">*</span>
+                                <p class=" font-medium">
+                                    Message <span class=" text-red-500 text-[16px]">*</span>
                                 </p>
                                 <textarea rows='4' cols='50' pattern='[a-zA-Z\s]+' name='mess'
                                     placeholder='Send me your message'
-                                    class='resize-none text-wrap w-full text-black text-[16px] pl-[8px] py-[10px] opacity-50 focus:outline-none rounded-md'
+                                    class='resize-none text-wrap w-full text-black text-[15px] pl-[8px] py-[10px] opacity-50 focus:outline-none rounded-md'
                                     required></textarea>
                                 <button
                                     class=" submit-btn mt-6 py-2 bg-blue-500 hover:bg-blue-600 transition-colors rounded-md text-white font-medium text-[16px] cursor-pointer">
@@ -334,7 +299,7 @@
                     </div>
                 </div>
                 <div class=" bg-[#2a2a2a] flex justify-center mt-4">
-                    <h4 class=" font-semibold sm:text-[16px] text-white mb-4">Developed by Dheenu ❤️</h4>
+                    <h4 class=" font-semibold text-[14px] sm:text-[16px] text-white mb-4">Developed by Dheenu ❤️</h4>
                 </div>
             </div>
             <div class=" fixed right-2 bottom-0" id="scrollSection" style="display: none;">
@@ -366,6 +331,26 @@
                     document.documentElement.scrollTop = 0;
                 }
             </script>
+            <script>
+                document.getElementById('menu-toggle').addEventListener('click', function () {
+                    // Toggle visibility of nav links
+                    document.getElementById('nav-links').classList.toggle('hidden');
+                    // Toggle visibility of hamburger icon
+                    this.classList.toggle('hidden');
+                    // Toggle visibility of X icon
+                    document.getElementById('menu-close').classList.toggle('hidden');
+                });
+            
+                document.getElementById('menu-close').addEventListener('click', function () {
+                    // Toggle visibility of nav links
+                    document.getElementById('nav-links').classList.toggle('hidden');
+                    // Toggle visibility of hamburger icon
+                    document.getElementById('menu-toggle').classList.toggle('hidden');
+                    // Toggle visibility of X icon
+                    this.classList.toggle('hidden');
+                });
+            </script>
 </body>
 
 </html>
+
