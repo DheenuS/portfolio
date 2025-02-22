@@ -1,0 +1,104 @@
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 5rem;
+}
+
+/* Custom cursor tracking */
+.cursor-tracking {
+    position: fixed;
+    width: 20px;
+    height: 20px;
+    background-color: #a51bf6;
+    border-radius: 50%;
+    pointer-events: none; /* Ensures it doesn't interfere with clicks */
+    z-index: 1000;
+    
+    /* Centering the cursor */
+    transform: translate(-50%, -50%);
+    
+    /* Smooth movement */
+    transition: left 0.05s linear, top 0.05s linear;
+    
+    /* Performance optimization */
+    will-change: transform;
+}
+
+
+.home {
+    padding-block-start: 1rem;
+}
+
+::-webkit-scrollbar {
+    width: 6px;
+    /* height: 6px; */
+    background-color: #fff;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #7200b4;
+    border-radius: 20px;
+    /* background-color: #a51bf6; */
+}
+
+.social-icons {
+    box-shadow: 0 0px 4px #a51bf6;
+}
+
+.social-icons:hover {
+    box-shadow: 2px 4px 10px #a51bf6;
+}
+
+.submit-btn:hover, .more-btn:hover {
+    box-shadow: 0 0px 2px #a51bf6;
+}
+
+.resume:hover {
+    box-shadow: 0 0px 4px #a51bf6;
+}
+
+.bg-black:hover p,
+h5 {
+    display: hidden;
+    top: -400px;
+}
+
+.scrollToTop {
+    display: none;
+}
+
+input::placeholder, textarea::placeholder {
+    color: #797979;
+}
+
+/* Select only the div children inside .tech___stack___home */
+.tech___stack___home > div {
+    animation: scaleSequence 6s infinite;
+}
+
+/* Keyframes to scale only one child at a time */
+@keyframes scaleSequence {
+    0%, 16.66% { transform: scale(1); } /* Default state */
+    8.33% { transform: scale(1.2); } /* Scale one child at a time */
+    25%, 100% { transform: scale(1); } /* Reset scale */
+}
+
+/* Apply animation delay per div */
+.tech___stack___home > div:nth-child(2) { animation-delay: 0s; }
+.tech___stack___home > div:nth-child(3) { animation-delay: 1s; }
+.tech___stack___home > div:nth-child(4) { animation-delay: 2s; }
+.tech___stack___home > div:nth-child(5) { animation-delay: 3s; }
+.tech___stack___home > div:nth-child(6) { animation-delay: 4s; }
+/* 
+.tech-icon {
+    @apply bg-[#1C1C1C] hover:bg-[#232323] border border-[#393939] rounded-xl 
+           p-3 md:p-4 flex items-center justify-center transition-all;
+  }
+  
+  .tech-icon img {
+    @apply w-8 h-8 md:w-10 md:h-10 object-contain;
+  }
+
+  .project-card {
+    @apply bg-[#1C1C1C] border-2 border-[#393939] rounded-2xl overflow-hidden 
+           transition-transform hover:scale-[1.02] h-full flex flex-col;
+  } */

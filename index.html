@@ -2,398 +2,470 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dheenu-Portfolio</title>
-    <!-- Tailwindcss CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Google Icon import link -->
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-    <link rel="icon" href="Images/dheencolored.jpeg">
-    <style>
-        html {
-            scroll-behavior: smooth;
-        }
-
-        ::-webkit-scrollbar {
-            width: 6px;
-            /* height: 6px; */
-            background-color: #fff;
-        }
-
-        ::-webkit-scrollbar-thumb {
-            background-color: #3b82f6;
-        }
-
-        .dheen {
-            box-shadow: 0 0px 100px #3b82f6;
-        }
-
-        .dheen:hover {
-            box-shadow: 0 0px 110px #3b82f6;
-        }
-
-        .icons {
-            box-shadow: 0 0px 4px #fff;
-        }
-
-        .icons:hover {
-            box-shadow: 2px 4px 10px #3b82f6;
-        }
-
-        .submit-btn:hover {
-            box-shadow: 0 0px 2px #3b82f6;
-        }
-
-        .resume:hover {
-            box-shadow: 0 0px 4px #fff;
-        }
-
-        .bg-black:hover p,
-        h5 {
-            display: hidden;
-            top: -400px;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dheenu | Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <link rel="icon" href="Images/Dheenu-Profile.png" />
+  <link rel="stylesheet" href="css/style.css" />
 </head>
 
-<body class="font-sans">
-    <div class="bg-[#2a2a2a]">
-        <!-- bg-gradient-to-r from-purple-500 via-indigo-500 to-purple-500 -->
-        <div class=" ">
-            <nav
-                class="relative sticky top-0 z-50 flex items-center justify-between pt-[8px] md:pt-[14px] pb-2 md:pb-3 px-4 md:px-16 bg-black/20 backdrop-blur-md hover:backdrop-blur-xl">
-                <p class=" font-semibold text-blue-400 p-0 text-[32px] md:text-[34px]">
-                    DS
-                </p>
-                <div class="sm:hidden md:hidden flex items-center space-x-4">
-                    <!-- Hamburger Icon -->
-                    <button id="menu-toggle" title="open" class="text-white hover:text-gray-300 focus:outline-none">
-                        <!-- SVG for Hamburger Icon -->
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                            stroke="currentColor" class="w-6 h-6 absolute right-5 top-5">
-                            <path stroke-linecap="round" stroke-linejoin="round"
-                                d="M3 5h18v1H3V5zm0 7h18v1H3v-1zm0 7h18v1H3v-1z" />
-                        </svg>
-                    </button>
-                    <!-- X Icon (Initially Hidden) -->
-                    <button id="menu-close" title="close" class="text-white hover:text-gray-300 focus:outline-none hidden">
-                        <!-- SVG for X Icon -->
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                            stroke="currentColor" class="w-7 h-7 absolute right-4 top-4">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
-                        </svg>
-                    </button>
-                </div>
-                <ul id="nav-links"
-                    class="hidden sm:flex md:flex items-center sm:space-x-6 md:space-x-12 py-2 pl-2 pr-2 rounded-full font-semibold text-white text-[16px]">
-                    <li
-                        class="font-normal hover:underline underline-offset-8 decoration-2 decoration-blue-500 cursor-pointer pt-2 pb-2 rounded-full">
-                        <a href="#" id="home">Home</a>
-                    </li>
-                    <li
-                        class="font-normal hover:underline underline-offset-8 decoration-2 decoration-blue-500 cursor-pointer pt-2 pb-2 rounded-full">
-                        <a href="#about">About me</a>
-                    </li>
-                    <li
-                        class="font-normal hover:underline underline-offset-8 decoration-2 decoration-blue-500 cursor-pointer pt-2 pb-2 rounded-full">
-                        <a href="#projects">Projects</a>
-                    </li>
-                    <li
-                        class="font-normal hover:underline underline-offset-8 decoration-2 decoration-blue-500 cursor-pointer pt-2 pb-2 rounded-full mb-2 sm:mb-0 md:mb-0 lg:mb-0 xl:mb-0">
-                        <a href="#contact">Contact</a>
-                    </li>
-                    <a href="Dheenu_S_Resume.pdf" download="Dheenu_S_Resume.pdf">
-                        <button
-                            class="resume cursor-pointer font-semibold bg-white text-black pr-6 pb-2 pl-6 pt-2 rounded-md text-[16px] shadow-md hover:shadow-gray-500">
-                            Resume
-                        </button>
-                    </a>
-                </ul>
-            </nav>
+<body class="font-sans bg-[#161616] text-white px-2">
+  <main>
+    <!-- Navigation -->
+    <nav
+      class="relative sticky top-4 z-50 flex items-center justify-between px-6 md:pl-10 md:pr-4 py-2 md:py-4 bg-[#1C1C1C] hover:bg-[#232323] border-2 border-[#393939] rounded-full max-w-full md:w-fit md:mx-auto mx-10 sm:mx-20 md:gap-10">
 
-            <div
-                class=" md:h-screen md:mt-[-110px] text-center md:flex md:gap-40 justify-center items-center text-white ">
-                <div class=" text-start mt-[20px] px-4">
-                    <div class="md:w-[580px] gap-y-[-10px] text-start">
-                        <h2 class=" text-gray-100 font-semibold text-[14px] md:text-[16px]">
-                            Hi, I'm
-                        </h2>
-                        <h2 class=" text-gray-100 font-semibold text-[32px] md:text-[52px]">DHEENU S
-                        </h2>
-                        <h3 class=" text-blue-400 font-semibold text-[18px] md:text-[28px] mb-2">
-                            Web Designer
-                        </h3>
-                        <p class=" text-start text-gray-200 font-noraml text-[16px] md:text-[16px]">
-                            Welcome to my portfolio! I'm Dheenu from siruvangur, TamilNadu. I'm a skilled and creative
-                            web designer with
-                            a passion for creating beautiful, responsive, and user-friendly web designs. This Portfolio
-                            website
-                            showcase my all works related to web design.
-                        </p>
-                        <div class="flex mt-5 space-x-4">
-                            <a href="https://github.com/DheenuS" target="_blank" rel="noopener" title="github">
-                                <img src="Images/github (2).png" alt="" class="icons p-[6px] w-[32px] h-[32px] md:w-[40px] md:h-[40px] bg-white rounded-md">
-                                </img>
-                            </a>
-                            <a href="https://www.linkedin.com/in/dheenus" target="_blank" rel="noopener" title="linkedin">
-                                <img src="Images/linkedin.png" alt="" class=" icons p-[6px] w-[32px] h-[32px] md:w-[40px] md:h-[40px] bg-white rounded-md">
-                                </img>
-                            </a>
-                            <a href="https://wa.me/919345550559" target="_blank" rel="noopener" title="whatsapp">
-                                <img src="Images/whatsapp.png" alt="" class=" icons p-[6px] w-[32px] h-[32px] md:w-[40px] md:h-[40px] bg-white rounded-md">
-                                </img>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="absolute flex justify-start">
-                        <a href="#about" class="">
-                            <button
-                                class=" outline outline-offset-4 outline-blue-500 flex gap-2 justify-center items-center font-normal text-[16px] md:text-[18px] md:rounded-md rounded-sm mt-8 md:mt-14 py-1 px-2 md:py-2 md:px-4 cursor-pointer bg-[#2a2a2a] text-white ">
-                                More about me
-                                <img src="Images/down_arrow.png" alt="arrow.png"
-                                    class=" relative top-1 w-[20px] md:w-[22px] h-[20px] md:h-[22px] animate-bounce">
-                            </button>
-                        </a>
-                    </div>
-                </div>
-                <div class=" hidden lg:block flex justify-center mt-28">
-                    <img src="Images/dheencolored.jpeg" alt="dheen.jpg"
-                        class=" dheen rounded-full w-[200px] h-[200px] md:w-[440px] md:h-[440px] border-2 md:border-4 border-blue-400 "></img>
-                </div>
-            </div>
-            <div id="about"
-                class="px-4 md:px-8 lg:px-16 xl:px-36 py-8 md:py-12 lg:py-16 flex flex-col items-center justify-center mt-16">
-                <h3 class="text-gray-100 text-center font-semibold text-[26px] md:text-[36px] pb-4 md:pb-8 md:pt-4">
-                    About me</h3>
-                <div
-                    class=" md:space-x-20 flex flex-col md:justify-center md:items-start md:flex-row rounded-lg overflow-hidden">
-                    <div class="md:w-[510px] p-2 md:p-4">
-                        <img src="Images/dheencolored.jpeg" alt="dheen.jpg"
-                            class="w-full md:max-w-[510px] h-auto outline outline-offset-4 outline-blue-500 rounded-md"></img>
-                    </div>
-                    <div class="md:w-1/2 p-2 md:p-2 text-start">
-                        <p class="text-gray-200 text-[16px] leading-relaxed mb-4 md:mb-6">
-                            Hey there, I'm Dheenu, a web designer with a passion for creating awesome digital
-                            experiences. I pay close attention to the details and love getting creative to turn ideas
-                            into reality with fresh design solutions.
-                        </p>
-                        <p class="text-gray-200 text-[16px] leading-relaxed mb-4 md:mb-6">
-                            My journey into web design started with a fascination for blending art and tech. I've got a
-                            Master's in Computer Application and have sharpened my skills to create designs that connect
-                            with people on different platforms.
-                        </p>
-                        <p class="text-gray-200 text-[16px] leading-relaxed mb-4 md:mb-6">
-                            I focus on making websites that not only look great but also offer a smooth user experience.
-                            I'm skilled in HTML, CSS, Tailwind CSS, and Figma, and I'm always learning to keep up with
-                            the ever-changing digital world.
-                        </p>
-                        <p class="text-gray-200 text-[16px] leading-relaxed mb-4 md:mb-6">
-                            Whether it's crafting sleek interfaces or making user journeys seamless, I'm all about
-                            delivering top-notch work. Check out my portfolio to see some of my projects that push
-                            boundaries and exceed expectations. I believe in finding balance and drawing inspiration
-                            from various experiences to fuel my creativity. Ready to take your online presence to the
-                            next level? Let's work together! Whether you're starting from scratch or revamping an
-                            existing site, I'm here to bring your vision to life.
-                        </p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Skills -->
-            <h3 class=" text-gray-100 text-center font-semibold text-[26px] md:text-[36px] pb-8 md:pb-16 mt-0 md:mt-24">
-                Designing Skills</h3>
-            <div class=" flex flex-col justify-center items-center">
-                <div class=" md:flex justify-between items-center gap-28">
-                    <div class="flex flex-col items-center space-y-2 md:space-y-6">
-                        <div
-                            class=" flex items-center bg-gray-100 p-6 w-[140px] h-[140px] rounded-full shadow-lg shadow-gray-600 ">
-                            <img src="Images/html.png" alt="html_image" class=""></img>
-                        </div>
-                        <p class="text-white font-semibold text-[16px] md:text-[18px]">HTML</p>
-                    </div>
-                    <div class="flex flex-col mt-6 items-center space-y-2 md:space-y-6">
-                        <div
-                            class=" flex items-center bg-gray-100 p-6 w-[140px] h-[140px] rounded-full shadow-lg shadow-gray-600 ">
-                            <img src="Images/css.png" alt="css_image" class="pl-2 w-[84px] h-[92px]"></img>
-                        </div>
-                        <p class="text-white font-semibold text-[16px] md:text-[18px]">CSS</p>
-                    </div>
-                    <div class="flex flex-col mt-6 items-center space-y-2 md:space-y-6">
-                        <div
-                            class=" flex items-center bg-gray-100 p-6 rounded-full w-[140px] h-[140px] shadow-lg shadow-gray-600 ">
-                            <img src="Images/tailwindcss.svg" alt="tailwindcss_image" class=""></img>
-                        </div>
-                        <p class="text-white font-semibold text-[16px] md:text-[18px]">Tailwind CSS</p>
-                    </div>
-                    <div class="flex flex-col mt-6 items-center space-y-2 md:space-y-6">
-                        <div
-                            class=" flex items-center bg-gray-100 p-6 rounded-full w-[140px] h-[140px] shadow-lg shadow-gray-600 ">
-                            <img src="Images/figma.png" alt="figma_image" class="rounded-lg"></img>
-                        </div>
-                        <p class="text-white font-semibold text-[16px] md:text-[18px]">Figma</p>
-                    </div>
-                </div>
-            </div>
-            <!-- Projects -->
-            <div id="projects" class="bg-[#2a2a2a] px-4 md:px-8 lg:px-36">
-                <h3 class="text-gray-100 text-center font-semibold mt-10 text-[26px] md:text-[36px] md:mt-24">Projects
-                </h3>
-                <p class="text-center text-[16px] md:text-[20px] text-gray-100 pb-8 md:pb-16">Here are my few works</p>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <div
-                        class="relative mx-auto bg-black rounded-md hover:outline outline-offset-4 outline-blue-500 overflow-hidden">
-                        <img src="Images/portfolio_image.png" alt="portfolio"
-                            class="w-full h-full transform hover:scale-105 opacity-30 transition-opacity duration-500 hover:opacity-100">
-                        <div class="hover:bg-black flex justify-center items-center">
-                            <p class="absolute top-6 left-6 font-semibold text-[16px] px-3 py-2 bg-blue-500 rounded-sm">
-                                DS portfolio</p>
-                        </div>
-                        <a href="https://dheenus.github.io/portfolio/" rel="noopener" target="_blank"
-                            class="absolute bottom-2 right-2 px-2 md:px-4 md:py-2 py-1 rounded-sm bg-white hover:text-white hover:bg-blue-500 text-[15px] font-semibold text-black hover:cursor-pointer z-40">Visit
-                            Now</a>
-                    </div>
-                    <div
-                        class=" relative mx-auto bg-black rounded-md hover:outline outline-offset-4 outline-blue-500 overflow-hidden">
-                        <img src="Images/hotel.png" alt="portfolio"
-                            class="w-full h-full transform hover:scale-105 opacity-30 transition-opacity duration-500 hover:opacity-100">
-                        <div class=" hover:bg-black flex justify-center items-center">
-                            <p
-                                class=" absolute top-5 left-6 text-black font-semibold text-[16px] px-3 py-2 bg-blue-500 rounded-sm">
-                                Hotel Management System</p>
-                        </div>
-                        <a href="https://github.com/DheenuS/Hotel-Dheen/blob/main/Project%20Images/Admin/dashboard.png" rel="noopener" target="_blank"
-                            class="absolute bottom-2 right-2 px-2 md:px-4 md:py-2 py-1 rounded-sm bg-white hover:text-white hover:bg-blue-500 text-[15px] font-semibold text-black hover:cursor-pointer z-40">Visit
-                            Now</a>
-                    </div>
-                    <div
-                        class="relative mx-auto bg-black rounded-md hover:outline outline-offset-4 outline-blue-500 overflow-hidden">
-                        <img src="Images/voice.png" alt="portfolio"
-                            class="w-full h-full transform hover:scale-105 opacity-30 transition-opacity duration-500 hover:opacity-100">
-                        <div class="hover:bg-black flex justify-center items-center">
-                            <p
-                                class=" absolute top-6 left-6 text-black font-semibold text-[16px] px-3 py-2 bg-blue-500 rounded-sm">
-                                Voice Speech Synthesis</p>
-                        </div>
-                        <a href="https://github.com/DheenuS/Voice" rel="noopener" target="_blank"
-                            class="absolute bottom-2 right-2 px-2 md:px-4 md:py-2 py-1 rounded-sm bg-white hover:text-white hover:bg-blue-500 text-[15px] font-semibold text-black hover:cursor-pointer z-40">Visit
-                            Now</a>
-                    </div>
-                    <!-- Repeat this block for other projects -->
-                </div>
-            </div>
-
-
-            <!-- contact -->
-            <div
-                class="static bottom-0 md:flex flex-col-3 md:justify-between items-start text-gray-100 pb-10 mt-8 md:mt-24 px-2 md:px-36">
-                <div class=" flex flex-col hover:text-gray-200 mb-6 px-2 ">
-                    <h4 class=" font-semibold text-[22px] md:text-[28px] hover:text-gray-200 mb-4 md:mb-4">Get in Touch
-                    </h4>
-                    <h5 class=" text-white text-[16px] md:text-[16px] hover:text-gray-200 font-noraml">Dheenu S</h5>
-                    <a href="tel:+919345550559">
-                        <h5 class=" text-white text-[16px] md:text-[16px] hover:text-gray-200 font-noraml">9345550559
-                        </h5>
-                    </a>
-                    <a href="mailto:email@gmail.com">
-                        <h5 class=" text-white text-[16px] md:text-[16px] hover:text-gray-200 font-noraml">
-                            dheendheenu777@gmail.com
-                        </h5>
-                    </a>
-                </div>
-                <div class=" flex flex-col mb-6 px-2">
-                    <h4 class=" font-semibold mb-4 md:mb-4 text-[22px] md:text-[28px] hover:text-gray-200">Stay
-                        Connected</h4>
-                    <a href="https://www.linkedin.com/in/dheenus" target="_blank" rel="noopener noreferrer"
-                        class=" hover:text-blue-400 hover:cursor-pointer text-[16px] md:text-[16px]">LinkedIn</a>
-                    <a href="https://github.com/DheenuS" target="_blank" rel="noopener noreferrer"
-                        class=" hover:text-blue-400 hover:cursor-pointer text-[16px] md:text-[16px]">Github</a>
-                    <a href="https://wa.me/919345550559" target="_blank" rel="noopener noreferrer"
-                        class=" hover:text-blue-400 hover:cursor-pointer text-[16px] md:text-[16px]">WhatsApp</a>
-                </div>
-                <div class="" id="contact">
-                    <div class="">
-                        <form class="flex flex-col gap-y-2 md:gap-y-2 px-2">
-                            <p class=" font-medium">
-                                Name <span class=" text-red-500 text-[16px]">*</span>
-                            </p>
-                            <input type="text"
-                                class=" focus:outline-none pl-3 pr-4 py-2 text-black bg-gray-100 rounded-md"
-                                title="fields" required></input>
-                            <p class=" font-medium">
-                                Email <span class=" text-red-500 text-[16px]">*</span>
-                            </p>
-                            <input type="email"
-                                class=" focus:outline-none pl-3 pr-4 py-2 text-black bg-gray-100 rounded-md "
-                                name="email" id="" title="fields" required></input>
-                            <p class=" font-medium">
-                                Message <span class=" text-red-500 text-[16px]">*</span>
-                            </p>
-                            <textarea rows='4' cols='50' pattern='[a-zA-Z\s]+' name='mess'
-                                placeholder='Send me your message'
-                                class='resize-none text-wrap w-full text-black text-[15px] pl-[8px] py-[10px] focus:outline-none rounded-md'
-                                required></textarea>
-                            <button type="submit"
-                                class=" w-full submit-btn mt-6 py-2 bg-blue-500 hover:bg-blue-600 transition-colors rounded-md text-white font-medium text-[16px] cursor-pointer">
-                                Send
-                            </button>
-                        </form>
-                    </div>
-                </div>
-            </div>
-            <div class=" bg-[#2a2a2a] flex justify-center mt-4">
-                <h4 class=" font-semibold text-[14px] sm:text-[16px] text-white mb-4">Developed by Dheenu ❤️</h4>
-            </div>
-        </div>
-        <div class=" fixed right-2 bottom-0" id="scrollSection" style="display: none;">
-            <button onclick="topFunction()" id="scroll"
-                class=" mb-2 py-[14px] px-4 bg-white hover:opacity-90 rounded-full">
-                <!-- Icon for go to top -->
-                <img src="Images/up-arrow.png" alt="top arrow" class=" w-[16px] h-[20px]">
+      <p class="md:hidden text-xl font-semibold">DS</p>
+      <!-- Desktop Navigation Links -->
+      <ul id="nav-links"
+        class="hidden md:flex font-semibold text-[16px] space-x-6 md:flex items-center md:justify-between gap-4">
+        <li class="pt-2 pb-2 rounded-full transition-transform hover:scale-110 "><a href="#home"
+            class="nav-link">Home</a></li>
+        <li class="pt-2 pb-2 rounded-full transition-transform hover:scale-110"><a href="#about" class="nav-link">About
+            me</a></li>
+        <li class="pt-2 pb-2 rounded-full transition-transform hover:scale-110"><a href="#projects"
+            class="nav-link">Projects</a></li>
+        <li class="pt-2 pb-2 rounded-full transition-transform hover:scale-110"><a href="#contact"
+            class="nav-link">Contact</a></li>
+        </li>
+      </ul>
+      <div class="hidden md:block">
+        <a href="/Resume/Dheenu_S_Resume_Frontend_Developer.pdf" download>
+          <button type="button"
+            class="resume font-semibold border-2 border-transparent bg-[#8c05da] text-white px-6 py-2 rounded-full shadow-md transition-transform hover:scale-105 active:scale-95"
+            title="Download my resume">
+            Resume
+          </button>
+        </a>
+      </div>
+      <!-- Mobile Navigation Links (visible only on mobile) -->
+      <ul id="mobile-nav"
+        class="hidden absolute top-16 left-0 right-0 bg-[#1C1C1C] flex flex-col items-center space-y-4 py-4 md:hidden">
+        <li class="pt-2 pb-2"><a href="#home" class="nav-link">Home</a></li>
+        <li class="pt-2 pb-2"><a href="#about" class="nav-link">About me</a></li>
+        <li class="pt-2 pb-2"><a href="#projects" class="nav-link">Projects</a></li>
+        <li class="pt-2 pb-2"><a href="#contact" class="nav-link">Contact</a></li>
+        <li>
+          <a href="/Resume/Dheenu_S_Resume_Frontend_Developer.pdf" download>
+            <button type="button"
+              class="resume font-semibold border-2 border-transparent bg-[#8c05da] text-white px-6 py-2 rounded-full shadow-md transition-transform hover:scale-105 active:scale-95"
+              title="Download my resume">
+              Resume
             </button>
+          </a>
+        </li>
+      </ul>
+
+      <!-- Mobile Hamburger (visible only on mobile) -->
+      <div class="flex md:hidden">
+        <button id="menu-toggle" title="open" class="text-white hover:text-gray-300 focus:outline-none">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+            stroke="currentColor" class="w-6 h-6">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3 5h18v1H3V5zm0 7h18v1H3v-1zm0 7h18v1H3v-1z" />
+          </svg>
+        </button>
+        <button id="menu-close" title="close" class="text-white hover:text-gray-300 focus:outline-none hidden">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+            stroke="currentColor" class="w-7 h-7">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
+    </nav>
+
+    <!-- Home Section -->
+    <section id="home" class="sm:mb-[5.4rem] flex flex-col items-center justify-start px-4 text-center lg:mt-6">
+      <div class="mt-8 md:mt-10 lg:mt-16 flex md:flex flex-col gap-4 md:gap-2 px-4 md:px-0">
+        <h2 class="text-gray-100 font-semibold text-xl md:text-[2rem]">Hello Everyone;</h2>
+        <h2 class="text-[#a51bf6] font-bold text-[2.5rem] md:text-[3.5rem]">
+          <span class="text-white">I'm</span> DHEENU
+        </h2>
+        <h3 class="text-white font-semibold text-lg md:text-3xl mb-2 text-wrap">Frontend Developer <span
+            class="text-gray-500">•</span> UI Designer & Developer</h3>
+      </div>
+
+      <div class="tech___stack___home hidden sm:flex items-center justify-center mt-5 gap-6">
+        <p class="md:text-[10rem] text-[#a51bf6] mt-[-2.5rem]">{</p>
+
+        <div
+          class="flex items-center justify-center bg-[#1C1C1C] hover:bg-[#232323] transition-transform duration-200 border border-[#393939] rounded-3xl p-6 cursor-pointer"
+          title="React Js">
+          <img src="Images/Icons/react.png" alt="React Icon" class="w-10 h-10 md:w-16 md:h-16">
         </div>
-        <script>
-            // Bottom to Top Scroll button
-            let mybutton = document.getElementById("scroll");
 
-            // When the user scrolls down 20px from the top, show the button
-            window.onscroll = function () { scrollFunction() };
+        <div
+          class="flex items-center justify-center bg-[#1C1C1C] hover:bg-[#232323] transition-transform duration-200 border border-[#393939] rounded-3xl p-7 cursor-pointer"
+          title="JavaScript">
+          <img src="Images/Icons/javascript.png" alt="JavaScript Icon" class="w-10 h-10 md:w-14 md:h-14">
+        </div>
 
-            function scrollFunction() {
-                let scrollSection = document.getElementById("scrollSection");
-                if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-                    scrollSection.style.display = "block";
-                } else {
-                    scrollSection.style.display = "none";
-                }
+        <div
+          class="flex items-center justify-center bg-[#1C1C1C] hover:bg-[#232323] transition-transform duration-200 border border-[#393939] rounded-3xl p-6 cursor-pointer"
+          title="Tailwind CSS">
+          <img src="Images/Icons/tailwind.svg" alt="Tailwind CSS Icon" class="w-10 h-10 md:w-16 md:h-16">
+        </div>
+
+        <div
+          class="flex items-center justify-center bg-[#1C1C1C] hover:bg-[#232323] transition-transform duration-200 border border-[#393939] rounded-3xl p-7 cursor-pointer"
+          title="CSS">
+          <img src="Images/Icons/css logo.webp" alt="CSS Icon" class="w-10 h-10 md:w-14 md:h-14">
+        </div>
+
+        <div
+          class="flex items-center justify-center bg-[#1C1C1C] hover:bg-[#232323] transition-transform duration-200 border border-[#393939] rounded-3xl p-6 cursor-pointer"
+          title="HTML">
+          <img src="Images/Icons/html-5.png" alt="HTML Icon" class="w-10 h-10 md:w-16 md:h-16">
+        </div>
+
+        <p class="md:text-[10rem] text-[#a51bf6] mt-[-3.2rem]">}</p>
+      </div>
+
+
+      <div class="sm:hidden w-[200px] h-1 bg-gray-800 mt-4 rounded-full"></div>
+
+      <div class="mt-8">
+        <a href="#about">
+          <button
+            class=" hidden sm:block md:flex items-center justify-center gap-2 text-sm md:text-base bg-[#1C1C1C] text-white outline outline-4 outline-offset-4 outline-[#7b00c3] rounded-md py-2.5 px-4 transition-transform hover:scale-95 active:scale-105">
+            More about me
+            <img src="Images/down_arrow.png" alt="Down Arrow" class="w-5 h-5 animate-bounce mt-1">
+          </button>
+        </a>
+      </div>
+
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="px-4 md:px-8 lg:px-16 py-4 sm:py-8 flex flex-col md:flex-col items-center">
+      <h3 class="text-white text-center font-semibold text-2xl md:text-3xl pb-8">
+        ABOUT ME
+        <div class="mx-auto bg-[#a51bf6] w-4 h-2 rounded-full transition duration-200"></div>
+      </h3>
+
+      <div class="w-full max-w-6xl md:flex md:gap-6 lg:gap-10 mx-auto"> <!-- Added max-width container -->
+        <div class="md:w-1/2 lg:w-1/2 p-2"> <!-- Changed to fractional width -->
+          <img src="Images/Dheenu-Profile.jpg" alt="Dheenu Profile" loading="lazy"
+            class="w-full h-auto border-2 p-2 border-white hover:border-[#7b00c3] transition duration-200 object-cover">
+        </div>
+
+        <div class="md:w-1/2 lg:w-1/2 text-left space-y-4 mt-6 md:mt-0 p-1 p-6 bg-[#1C1C1C] hover:bg-[#232323] transition duration-200 border border-[#393939] rounded-3xl"> <!-- Changed to fractional width -->
+          <div class="text-white font-normal text-[16px] sm:text-[18px] md:text-[18px] lg:text-[1.2rem] space-y-4">
+            <h2>
+              👋🏻 Hi, I'm Dheenu, a detail-oriented Frontend Developer passionate about creating aesthetic user
+              interfaces
+              (UI)
+              along with excellent user experience (UX) and responsive designs using React JS, JavaScript, Tailwind CSS,
+              CSS
+              and HTML.
+            </h2>
+            <h2>
+              I have strong desire in continuous learning to tackle more challenges in my field.
+            </h2>
+          </div>
+
+          <div class=" space-y-1 md:text-[1rem] lg:text-[1.1rem] p-6 space-y-2 bg-[#161616] hover:bg-[#1C1C1C] transition duration-200 border border-[#393939] rounded-3xl w-full">
+            <p class="font-bold text-xl text-white">EDUCATION 🎓</p>
+            <div class="sm:flex gap-2 text-white">
+              <p>Master of Computer Application </p>
+              <span class="font-bold text-gray-500">CGPA: 7.89</span>
+            </div>
+            <div class="sm:flex gap-2 text-white">
+              <p>Bachelor of Computer Application </p>
+              <span class="font-bold text-gray-500">CGPA: 8.74</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Tech Stack Section -->
+    <section class="px-4 md:px-[5rem] lg:px-[12rem] py-4 sm:py-8 md:mb-[4.8rem]">
+      <h3 class="text-white text-center font-bold text-2xl md:text-3xl pb-8">
+        TECH STACK
+        <div class="mx-auto bg-[#a51bf6] w-4 h-2 rounded-full transition duration-200"></div>
+      </h3>
+
+      <div class="grid grid-cols-2 gap-4 mt-4 w-full sm:grid-cols-3 md:grid-cols-4">
+        <div
+          class="bg-[#1C1C1C] hover:bg-[#232323] transition duration-200 border border-[#393939] rounded-3xl flex items-center justify-center p-4 sm:p-6 md:p-4 lg:p-6"
+          title="HTML">
+          <img src="Images/Icons/html-5.png" alt="HTML Icon"
+            class="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 lg:w-18 lg:h-18">
+        </div>
+        <div
+          class="bg-[#1C1C1C] hover:bg-[#232323] transition duration-200 border border-[#393939] rounded-3xl flex items-center justify-center p-4 sm:p-6 md:p-4 lg:p-6"
+          title="CSS">
+          <img src="Images/Icons/css logo.webp" alt="CSS Icon"
+            class="w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 lg:w-16 lg:h-16">
+        </div>
+        <div
+          class="bg-[#1C1C1C] hover:bg-[#232323] transition duration-200 border border-[#393939] rounded-3xl flex items-center justify-center p-4 sm:p-6 md:p-4 lg:p-6"
+          title="Tailwind CSS">
+          <img src="Images/Icons/tailwind.svg" alt="Tailwind Icon"
+            class="w-10 h-10 sm:w-12 sm:h-12 md:w-16 md:h-16 lg:w-18 lg:h-18">
+        </div>
+        <div
+          class="bg-[#1C1C1C] hover:bg-[#232323] transition duration-200 border border-[#393939] rounded-3xl flex items-center justify-center p-4 sm:p-6 md:p-4 lg:p-8"
+          title="JavaScript">
+          <img src="Images/Icons/javascript.png" alt="JavaScript Icon"
+            class="w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 lg:w-12 lg:h-12">
+        </div>
+        <div
+          class="bg-[#1C1C1C] hover:bg-[#232323] transition duration-200 border border-[#393939] rounded-3xl flex items-center justify-center p-4 sm:p-6 md:p-4 lg:p-6"
+          title="React Js">
+          <img src="Images/Icons/react.png" alt="React Icon"
+            class="w-10 h-10 sm:w-12 sm:h-12 md:w-16 md:h-16 lg:w-16 lg:h-16">
+        </div>
+        <div
+          class="bg-[#1C1C1C] hover:bg-[#232323] transition duration-200 border border-[#393939] rounded-3xl flex items-center justify-center p-4 sm:p-6 md:p-4 lg:p-4"
+          title="Git">
+          <img src="Images/Icons/git.png" alt="Git Icon"
+            class="w-10 h-10 sm:w-12 sm:h-12 md:w-16 md:h-16 lg:w-20 lg:h-20">
+        </div>
+        <div
+          class="bg-[#1C1C1C] hover:bg-[#232323] transition duration-200 border border-[#393939] rounded-3xl flex items-center justify-center p-4 sm:p-6 md:p-4 lg:p-7"
+          title="GitHub">
+          <img src="Images/Icons/github.png" alt="GitHub Icon" class="w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14">
+        </div>
+        <div
+          class="bg-[#1C1C1C] hover:bg-[#232323] transition duration-200 border border-[#393939] rounded-3xl flex items-center justify-center p-4 sm:p-6 md:p-4 lg:p-6"
+          title="Figma">
+          <img src="Images/Icons/figma.png" alt="Figma Icon" class="w-10 h-10 sm:w-12 sm:h-12 md:w-16 md:h-16">
+        </div>
+      </div>
+    </section>
+
+
+    <!-- Projects Section -->
+    <section id="projects" class=" px-6 md:px-8 lg:px-36 xl:px-48 pt-2 pb-8 md:mb-[10rem]">
+      <h3 class="text-white text-center font-bold text-2xl md:text-3xl xl:text-4xl pb-8 py-4 sm:py-8">
+        PROJECTS
+        <div class="mx-auto bg-[#a51bf6] w-4 h-2 rounded-full transition duration-200"></div>
+      </h3>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Project Card 1 -->
+        <div
+          class="relative mx-auto overflow-hidden bg-[#1C1C1C] border-2 border-[#393939] rounded-3xl transition-transform hover:scale-105 max-w-sm md:max-w-lg lg:max-w-lg xl:max-w-xl h-[420px] md:h-[420px] lg:h-[450px] xl:h-[480px]">
+          <div class="w-full overflow-hidden">
+            <img src="Images/hotel-card-image.png" alt="Hotel Management System"
+              class="w-full h-56 lg:h-64 xl:h-72 object-cover transition-transform duration-500 hover:scale-105">
+          </div>
+          <div class="flex flex-wrap gap-2 p-3">
+            <span
+              class="px-3 py-1 border-2 border-[#393939] text-gray-400 text-sm rounded-md hover:text-orange-500 transition-colors">HTML</span>
+            <span
+              class="px-3 py-1 border-2 border-[#393939] text-gray-400 text-sm rounded-md hover:text-violet-500 transition-colors">CSS</span>
+            <span
+              class="px-3 py-1 border-2 border-[#393939] text-gray-400 text-sm rounded-md hover:text-cyan-500 transition-colors">Tailwind
+              CSS</span>
+            <span
+              class="px-3 py-1 border-2 border-[#393939] text-gray-400 text-sm rounded-md hover:text-yellow-500 transition-colors">JavaScript</span>
+          </div>
+          <div class="px-4 mt-2">
+            <p class="font-bold text-white text-xl">Hotel Management System</p>
+          </div>
+          <a href="http://hotel-dheen.lovestoblog.com/?i=1" target="_blank" rel="noopener"
+            class="absolute bottom-2 right-2 flex items-center justify-center gap-2 bg-[#7b00c3] hover:bg-[#7200b4] text-white text-sm font-semibold px-4 py-2 rounded-full transition-transform hover:scale-95">
+            <span>Live Demo</span>
+            <img src="Images/Icons/project-link-icon.png" alt="Project Link Icon" class="w-4 h-4">
+          </a>
+        </div>
+
+        <!-- Project Card 2 -->
+        <div
+          class="relative mx-auto overflow-hidden bg-[#1C1C1C] border-2 border-[#393939] rounded-3xl transition-transform hover:scale-105 max-w-sm md:max-w-lg lg:max-w-lg xl:max-w-xl h-[420px] md:h-[420px] lg:h-[450px] xl:h-[480px]">
+          <div class="w-full overflow-hidden">
+            <img src="Images/gemeni-card-image.png" alt="Google Gemini AI Clone"
+              class="w-full h-56 lg:h-64 xl:h-72 object-cover transition-transform duration-500 hover:scale-105">
+          </div>
+          <div class="flex flex-wrap gap-2 p-3">
+            <span
+              class="px-3 py-1 border-2 border-[#393939] text-gray-400 text-sm rounded-md hover:text-orange-500 transition-colors">HTML</span>
+            <span
+              class="px-3 py-1 border-2 border-[#393939] text-gray-400 text-sm rounded-md hover:text-violet-500 transition-colors">CSS</span>
+            <span
+              class="px-3 py-1 border-2 border-[#393939] text-gray-400 text-sm rounded-md hover:text-cyan-500 transition-colors">Tailwind
+              CSS</span>
+            <span
+              class="px-3 py-1 border-2 border-[#393939] text-gray-400 text-sm rounded-md hover:text-yellow-500 transition-colors">JavaScript</span>
+          </div>
+          <div class="px-4 mt-2">
+            <p class="font-bold text-white text-xl">Google Gemini AI Clone</p>
+          </div>
+          <a href="https://gemini-design-clone.netlify.app/" target="_blank" rel="noopener"
+            class="absolute bottom-2 right-2 flex items-center gap-2 bg-[#7b00c3] hover:bg-[#7200b4] text-white text-sm font-semibold px-4 py-2 rounded-full transition-transform hover:scale-95">
+            <span>Live Demo</span>
+            <img src="Images/Icons/project-link-icon.png" alt="Project Link Icon" class="w-4 h-4">
+          </a>
+        </div>
+
+        <!-- Project Card 3 -->
+        <div
+          class="relative mx-auto overflow-hidden bg-[#1C1C1C] border-2 border-[#393939] rounded-3xl transition-transform hover:scale-105 max-w-sm md:max-w-lg lg:max-w-lg xl:max-w-xl h-[420px] md:h-[420px] lg:h-[450px] xl:h-[480px]">
+          <div class="w-full overflow-hidden">
+            <img src="Images/whatsapp-card-image.png" alt="WhatsApp Desktop Clone"
+              class="w-full h-56 lg:h-64 xl:h-72 object-cover transition-transform duration-500 hover:scale-105">
+          </div>
+          <div class="flex flex-wrap gap-2 p-3">
+            <span
+              class="px-3 py-1 border-2 border-[#393939] text-gray-400 text-sm rounded-md hover:text-orange-500 transition-colors">HTML</span>
+            <span
+              class="px-3 py-1 border-2 border-[#393939] text-gray-400 text-sm rounded-md hover:text-violet-500 transition-colors">CSS</span>
+            <span
+              class="px-3 py-1 border-2 border-[#393939] text-gray-400 text-sm rounded-md hover:text-cyan-500 transition-colors">Tailwind
+              CSS</span>
+            <span
+              class="px-3 py-1 border-2 border-[#393939] text-gray-400 text-sm rounded-md hover:text-yellow-500 transition-colors">JavaScript</span>
+          </div>
+          <div class="px-4 mt-2">
+            <p class="font-bold text-white text-xl">WhatsApp Desktop Clone</p>
+          </div>
+          <a href="https://whats-app-dheen.netlify.app/" target="_blank" rel="noopener"
+            class="absolute bottom-2 right-2 flex items-center gap-2 bg-[#7b00c3] hover:bg-[#7200b4] text-white text-sm font-semibold px-4 py-2 rounded-full transition-transform hover:scale-95">
+            <span>Live Demo</span>
+            <img src="Images/Icons/project-link-icon.png" alt="Project Link Icon" class="w-4 h-4">
+          </a>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- Contact Section -->
+    <section id="contact" class="px-4 md:px-8 lg:px-36 py-8">
+      <div class="flex flex-col md:flex-row md:items-start md:justify-between gap-6">
+        <div class="flex flex-col mb-6 text-left md:text-left px-3 md:px-0">
+          <h4 class="font-bold text-xl text-white mb-4 md:mb-[1.5rem] group text-center md:text-left">
+            Find me on Social
+            <div
+              class="mx-auto md:mx-0 bg-[#a51bf6] w-4 group-hover:w-[100px] h-2 rounded-full mt-2 transition duration-200">
+            </div>
+          </h4>
+          <div class="grid grid-cols-2 gap-4">
+            <a href="https://www.linkedin.com/in/dheenus" target="_blank" rel="noopener noreferrer"
+              class="flex items-center gap-4 bg-[#1C1C1C] border-2 border-[#393939] rounded-xl p-4 sm:pl-4 sm:pr-10 sm:py-4 transition-transform hover:scale-105">
+              <img src="Images/Icons/linkedin.png" alt="LinkedIn Icon" class="w-10 h-10">
+              <span>LinkedIn</span>
+            </a>
+            <a href="mailto:dheenus2003@gmail.com" target="_blank" rel="noopener noreferrer"
+              class="flex items-center gap-4 bg-[#1C1C1C] border-2 border-[#393939] rounded-xl p-4 sm:pl-4 sm:pr-10 sm:py-4 transition-transform hover:scale-105">
+              <img src="Images/Icons/gmail.png" alt="Gmail Icon" class="w-10 h-10">
+              <span>Gmail</span>
+            </a>
+            <a href="https://github.com/DheenuS" target="_blank" rel="noopener noreferrer"
+              class="flex items-center gap-4 bg-[#1C1C1C] border-2 border-[#393939] rounded-xl p-4 sm:pl-4 sm:pr-10 sm:py-4 transition-transform hover:scale-105">
+              <img src="Images/Icons/github.png" alt="GitHub Icon" class="w-10 h-10">
+              <span>Github</span>
+            </a>
+            <a href="https://instagram.com/dheen_dp/" target="_blank" rel="noopener noreferrer"
+              class="flex items-center gap-4 bg-[#1C1C1C] border-2 border-[#393939] rounded-xl p-4 sm:pl-4 sm:pr-10 sm:py-4 transition-transform hover:scale-105">
+              <img src="Images/Icons/instagram.png" alt="Instagram Icon" class="w-10 h-10">
+              <span>Instagram</span>
+            </a>
+            <a href="https://wa.me/919345550559" target="_blank" rel="noopener noreferrer"
+              class="flex items-center gap-4 bg-[#1C1C1C] border-2 border-[#393939] rounded-xl p-4 sm:pl-4 sm:pr-10 sm:py-4 transition-transform hover:scale-105">
+              <img src="Images/Icons/whatsapp.png" alt="WhatsApp Icon" class="w-10 h-10">
+              <span>Whatsapp</span>
+            </a>
+            <a href="https://x.com/DheenDev/" target="_blank" rel="noopener noreferrer"
+              class="flex items-center gap-4 bg-[#1C1C1C] border-2 border-[#393939] rounded-xl p-4 sm:pl-4 sm:pr-10 sm:py-4 transition-transform hover:scale-105">
+              <img src="Images/Icons/twitter.png" alt="Twitter Icon" class="w-8 h-8">
+              <span>X (Twitter)</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="w-full md:w-1/2 px-3 md:px-0">
+          <h4 class="font-bold text-xl text-white mb-4 group text-center md:text-left">
+            Get in Touch
+            <div
+              class="mx-auto md:mx-0 bg-[#a51bf6] w-4 group-hover:w-[100px] h-2 rounded-full mt-2 transition duration-200">
+            </div>
+          </h4>
+          <form class="flex flex-col gap-2">
+            <label class="font-medium">Name</label>
+            <input type="text" placeholder="Your name" required
+              class="focus:outline-none pl-3 pr-4 py-2 bg-[#1C1C1C] hover:bg-[#232323] rounded-xl border-2 border-[#333] focus:border-[#a51bf6]">
+            <label class="font-medium">Email</label>
+            <input type="email" placeholder="Your email" required
+              class="focus:outline-none pl-3 pr-4 py-2 bg-[#1C1C1C] hover:bg-[#232323] rounded-xl border-2 border-[#333] focus:border-[#a51bf6]">
+            <label class="font-medium">Message</label>
+            <textarea rows="4" placeholder="Your message" required
+              class="resize-none bg-[#1C1C1C] hover:bg-[#232323] text-white text-sm p-2 focus:outline-none rounded-xl border-2 border-[#333] focus:border-[#a51bf6]"></textarea>
+            <button type="submit"
+              class="w-full mt-4 py-2 bg-[#7b00c3] rounded-xl text-white font-medium text-base transition-transform hover:scale-95 active:scale-105">
+              Send Your Message
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="flex flex-col items-center py-4">
+      <p class="font-semibold text-sm md:text-base">Developed with 💜 by Dheenu © 2025</p>
+    </footer>
+
+    <!-- Scroll To Top Button -->
+    <div id="scrollSection" class="fixed right-2 bottom-2 hidden">
+      <button onclick="topFunction()" class="flex flex-col items-center">
+        <img src="Images/down_arrow.png" alt="Top Arrow" class="w-6 h-6 rotate-180">
+        <p class="[writing-mode:vertical-rl] [text-orientation:mixed] font-semibold text-xs">GO TO TOP</p>
+      </button>
+    </div>
+  </main>
+
+  <script>
+    // Scroll-to-Top Button
+    window.onscroll = function () {
+      const scrollSection = document.getElementById('scrollSection');
+      scrollSection.style.display = document.documentElement.scrollTop > 720 ? 'block' : 'none';
+    };
+
+    function topFunction() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    // Mobile Menu Toggle
+    const menuToggle = document.getElementById('menu-toggle');
+    const menuClose = document.getElementById('menu-close');
+    const mobileNav = document.getElementById('mobile-nav');
+
+    menuToggle.addEventListener('click', function () {
+      mobileNav.classList.remove('hidden');
+      menuToggle.classList.add('hidden');
+      menuClose.classList.remove('hidden');
+    });
+
+    menuClose.addEventListener('click', function () {
+      mobileNav.classList.add('hidden');
+      menuClose.classList.add('hidden');
+      menuToggle.classList.remove('hidden');
+    });
+
+    // Active Navigation Link on Scroll
+    const sections = document.querySelectorAll('section, .home');
+    const navLinks = document.querySelectorAll('.nav-link');
+
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          navLinks.forEach(link => {
+            link.classList.remove('underline', 'decoration-4', 'decoration-[#8c05da]');
+            if (link.getAttribute('href') === `#${entry.target.id}`) {
+              link.classList.add('underline', 'decoration-4', 'decoration-[#8c05da]');
             }
+          });
+        }
+      });
+    }, { threshold: 0.5 });
 
-            // When the user clicks on the button, scroll to the top
-            function topFunction() {
-                document.body.scrollTop = 0;
-                document.documentElement.scrollTop = 0;
-            }
-        </script>
-        <script>
-            document.getElementById('menu-toggle').addEventListener('click', function () {
-                // Toggle visibility of nav links
-                document.getElementById('nav-links').classList.toggle('hidden');
-                // Toggle visibility of hamburger icon
-                this.classList.toggle('hidden');
-                // Toggle visibility of X icon
-                document.getElementById('menu-close').classList.toggle('hidden');
-            });
+    sections.forEach(section => observer.observe(section));
+  </script>
 
-            document.getElementById('menu-close').addEventListener('click', function () {
-                // Toggle visibility of nav links
-                document.getElementById('nav-links').classList.toggle('hidden');
-                // Toggle visibility of hamburger icon
-                document.getElementById('menu-toggle').classList.toggle('hidden');
-                // Toggle visibility of X icon
-                this.classList.toggle('hidden');
-            });
-        </script>
 </body>
 
 </html>
