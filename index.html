@@ -49,10 +49,9 @@
         <li class="pt-2 pb-2"><a href="#projects" class="nav-link">Projects</a></li>
         <li class="pt-2 pb-2"><a href="#contact" class="nav-link">Contact</a></li>
         <li>
-          <a href="/Resume/Dheenu_S_Resume_Frontend_Developer.pdf" download="Dheenu_S_Resume_Frontend_Developer.pdf"
-            class="resume-download-link">
+          <a href="Resume/Dheenu_S_Resume_Frontend_Developer.pdf" download>
             <button type="button"
-              class="font-semibold border-2 border-transparent bg-[#8c05da] text-white px-6 py-2 rounded-full shadow-md transition-transform hover:scale-105 active:scale-95"
+              class="resume font-semibold border-2 border-transparent bg-[#8c05da] text-white px-6 py-2 rounded-full shadow-md transition-transform hover:scale-105 active:scale-95"
               title="Download my resume">
               Resume
             </button>
@@ -152,9 +151,7 @@
             class="w-full h-auto border-2 p-2 border-white hover:border-[#7b00c3] transition duration-200 object-cover">
         </div>
 
-        <div
-          class="md:w-1/2 lg:w-1/2 text-left space-y-4 mt-6 md:mt-0 p-1 p-6 bg-[#1C1C1C] hover:bg-[#232323] transition duration-200 border border-[#393939] rounded-3xl">
-          <!-- Changed to fractional width -->
+        <div class="md:w-1/2 lg:w-1/2 text-left space-y-4 mt-6 md:mt-0 p-1 p-6 bg-[#1C1C1C] hover:bg-[#232323] transition duration-200 border border-[#393939] rounded-3xl"> <!-- Changed to fractional width -->
           <div class="text-white font-normal text-[16px] sm:text-[18px] md:text-[18px] lg:text-[1.2rem] space-y-4">
             <h2>
               👋🏻 Hi, I'm Dheenu, a detail-oriented Frontend Developer passionate about creating aesthetic user
@@ -169,8 +166,7 @@
             </h2>
           </div>
 
-          <div
-            class=" space-y-1 md:text-[1rem] lg:text-[1.1rem] p-6 space-y-2 bg-[#161616] hover:bg-[#1C1C1C] transition duration-200 border border-[#393939] rounded-3xl w-full">
+          <div class=" space-y-1 md:text-[1rem] lg:text-[1.1rem] p-6 space-y-2 bg-[#161616] hover:bg-[#1C1C1C] transition duration-200 border border-[#393939] rounded-3xl w-full">
             <p class="font-bold text-xl text-white">EDUCATION 🎓</p>
             <div class="sm:flex gap-2 text-white">
               <p>Master of Computer Application </p>
@@ -468,34 +464,6 @@
     }, { threshold: 0.5 });
 
     sections.forEach(section => observer.observe(section));
-  </script>
-
-  <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      const resumeLinks = document.querySelectorAll('.resume-download-link');
-
-      resumeLinks.forEach(link => {
-        link.addEventListener('click', function (e) {
-          // Prevent default action for modern browsers
-          e.preventDefault();
-
-          // Create temporary anchor
-          const tempLink = document.createElement('a');
-          tempLink.href = this.href;
-          tempLink.setAttribute('download', 'Dheenu_S_Resume_Frontend_Developer.pdf');
-
-          // For IE/Edge
-          if (window.navigator.msSaveBlob) {
-            window.navigator.msSaveBlob(this.href, 'Dheenu_S_Resume_Frontend_Developer.pdf');
-          } else {
-            // Trigger click on temporary link
-            document.body.appendChild(tempLink);
-            tempLink.click();
-            document.body.removeChild(tempLink);
-          }
-        });
-      });
-    });
   </script>
 
 </body>
