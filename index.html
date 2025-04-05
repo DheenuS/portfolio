@@ -79,7 +79,7 @@
     <!-- Home Section -->
     <section id="home" class="sm:mb-[5.4rem] flex flex-col items-center justify-start px-4 text-center lg:mt-6">
       <div class="mt-8 md:mt-10 lg:mt-16 flex md:flex flex-col gap-4 md:gap-2 px-4 md:px-0">
-        <h2 class="text-gray-100 font-semibold text-xl md:text-[2rem]">Hello Everyone;</h2>
+        <h2 class="text-gray-100 font-semibold text-xl md:text-[2rem]">Hello Everyone :)</h2>
         <h2 class="text-[#a51bf6] font-bold text-[2.5rem] md:text-[3.5rem]">
           <span class="text-white">I'm</span> DHEENU
         </h2>
@@ -87,8 +87,8 @@
             class="text-gray-500">•</span> UI Designer & Developer</h3>
       </div>
 
-      <div class="tech___stack___home hidden sm:flex items-center justify-center mt-5 gap-6">
-        <p class="md:text-[10rem] text-[#a51bf6] mt-[-2.5rem]">{</p>
+      <div class="tech___stack___home grid grid-cols-3 sm:flex items-center justify-center mt-5 gap-6">
+        <p class="md:text-[10rem] text-[#a51bf6] mt-[-2.5rem] hidden md:block">{</p>
 
         <div
           class="flex items-center justify-center bg-[#1C1C1C] hover:bg-[#232323] transition-transform duration-200 border border-[#393939] rounded-3xl p-6 cursor-pointer"
@@ -99,7 +99,7 @@
         <div
           class="flex items-center justify-center bg-[#1C1C1C] hover:bg-[#232323] transition-transform duration-200 border border-[#393939] rounded-3xl p-7 cursor-pointer"
           title="JavaScript">
-          <img src="Images/Icons/javascript.png" alt="JavaScript Icon" class="w-10 h-10 md:w-14 md:h-14">
+          <img src="Images/Icons/javascript.png" alt="JavaScript Icon" class="w-8 h-8 md:w-14 md:h-14">
         </div>
 
         <div
@@ -109,27 +109,24 @@
         </div>
 
         <div
-          class="flex items-center justify-center bg-[#1C1C1C] hover:bg-[#232323] transition-transform duration-200 border border-[#393939] rounded-3xl p-7 cursor-pointer"
+          class="hidden sm:block flex items-center justify-center bg-[#1C1C1C] hover:bg-[#232323] transition-transform duration-200 border border-[#393939] rounded-3xl p-7 cursor-pointer"
           title="CSS">
           <img src="Images/Icons/css logo.webp" alt="CSS Icon" class="w-10 h-10 md:w-14 md:h-14">
         </div>
 
         <div
-          class="flex items-center justify-center bg-[#1C1C1C] hover:bg-[#232323] transition-transform duration-200 border border-[#393939] rounded-3xl p-6 cursor-pointer"
+          class="hidden sm:block flex items-center justify-center bg-[#1C1C1C] hover:bg-[#232323] transition-transform duration-200 border border-[#393939] rounded-3xl p-6 cursor-pointer"
           title="HTML">
           <img src="Images/Icons/html-5.png" alt="HTML Icon" class="w-10 h-10 md:w-16 md:h-16">
         </div>
 
-        <p class="md:text-[10rem] text-[#a51bf6] mt-[-3.2rem]">}</p>
+        <p class="md:text-[10rem] text-[#a51bf6] mt-[-3.2rem] hidden md:block">}</p>
       </div>
-
-
-      <div class="sm:hidden w-[200px] h-1 bg-gray-800 mt-4 rounded-full"></div>
 
       <div class="mt-8">
         <a href="#about">
           <button
-            class=" hidden sm:block md:flex items-center justify-center gap-2 text-sm md:text-base bg-[#1C1C1C] text-white outline outline-4 outline-offset-4 outline-[#7b00c3] rounded-md py-2.5 px-4 transition-transform hover:scale-95 active:scale-105">
+            class=" hidden sm:block sm:flex items-center justify-center gap-2 text-sm md:text-base bg-[#1C1C1C] text-white outline outline-4 outline-offset-4 outline-[#7b00c3] rounded-md py-2.5 px-4 transition-transform hover:scale-95 active:scale-105">
             More about me
             <img src="Images/down_arrow.png" alt="Down Arrow" class="w-5 h-5 animate-bounce mt-1">
           </button>
@@ -139,19 +136,23 @@
     </section>
 
     <!-- About Section -->
-    <section id="about" class="px-4 md:px-8 lg:px-16 py-4 sm:py-8 flex flex-col md:flex-col items-center">
-      <h3 class="text-white text-center font-semibold text-2xl md:text-3xl pb-8">
+    <section id="about" class="px-4 md:px-8 lg:px-16 py-4 sm:py-8 flex flex-col md:flex-col items-center ">
+      <h3
+        class="group text-white text-center font-semibold text-2xl md:text-3xl mb-8 transition ease-in-out delay-200 duration-200">
         ABOUT ME
-        <div class="mx-auto bg-[#a51bf6] w-4 h-2 rounded-full transition duration-200"></div>
+        <div class="mx-auto bg-[#a51bf6] group-hover:w-20 w-10 mt-1.5 h-2 rounded-full transition-all duration-200">
+        </div>
       </h3>
 
       <div class="w-full max-w-6xl md:flex md:gap-6 lg:gap-10 mx-auto"> <!-- Added max-width container -->
         <div class="md:w-1/2 lg:w-1/2 p-2"> <!-- Changed to fractional width -->
           <img src="Images/Dheenu-Profile.jpg" alt="Dheenu Profile" loading="lazy"
-            class="w-full h-auto border-2 p-2 border-white hover:border-[#7b00c3] transition duration-200 object-cover">
+            class="w-full h-auto border-2 p-2 sm:border-white hover:border-white border-[#7b00c3] md:hover:border-[#7b00c3] transition duration-200 object-cover">
         </div>
 
-        <div class="md:w-1/2 lg:w-1/2 text-left space-y-4 mt-6 md:mt-0 p-1 p-6 bg-[#1C1C1C] hover:bg-[#232323] transition duration-200 border border-[#393939] rounded-3xl"> <!-- Changed to fractional width -->
+        <div
+          class="md:w-1/2 lg:w-1/2 text-left space-y-4 mt-6 md:mt-0 p-1 p-6 bg-[#1C1C1C] hover:bg-[#232323] transition duration-200 border border-[#393939] rounded-3xl">
+          <!-- Changed to fractional width -->
           <div class="text-white font-normal text-[16px] sm:text-[18px] md:text-[18px] lg:text-[1.2rem] space-y-4">
             <h2>
               👋🏻 Hi, I'm Dheenu, a detail-oriented Frontend Developer passionate about creating aesthetic user
@@ -166,15 +167,18 @@
             </h2>
           </div>
 
-          <div class=" space-y-1 md:text-[1rem] lg:text-[1.1rem] p-6 space-y-2 bg-[#161616] hover:bg-[#1C1C1C] transition duration-200 border border-[#393939] rounded-3xl w-full">
-            <p class="font-bold text-xl text-white">EDUCATION 🎓</p>
+          <div
+            class=" space-y-1 md:text-[1rem] lg:text-[1.1rem] p-6 space-y-2 bg-[#161616] hover:bg-[#1C1C1C] transition duration-200 border border-[#393939] rounded-3xl w-full">
+            <p class="font-bold text-xl text-white">EDUCATION <span
+                class="p-1 bg-[#1C1C1C] hover:bg-[#161616] transition duration-200 border border-[#393939] rounded-3xl">🎓</span>
+            </p>
             <div class="sm:flex gap-2 text-white">
               <p>Master of Computer Application </p>
-              <span class="font-bold text-gray-500">CGPA: 7.89</span>
+              <span class="font-bold text-gray-500">Percentage: 77.86</span>
             </div>
             <div class="sm:flex gap-2 text-white">
               <p>Bachelor of Computer Application </p>
-              <span class="font-bold text-gray-500">CGPA: 8.74</span>
+              <span class="font-bold text-gray-500">Percentage: 78.4</span>
             </div>
           </div>
 
@@ -184,73 +188,77 @@
 
     <!-- Tech Stack Section -->
     <section class="px-4 md:px-[5rem] lg:px-[12rem] py-4 sm:py-8 md:mb-[4.8rem]">
-      <h3 class="text-white text-center font-bold text-2xl md:text-3xl pb-8">
+      <h3
+        class="group text-white text-center font-semibold text-2xl md:text-3xl mb-8 transition ease-in-out delay-200 duration-200">
         TECH STACK
-        <div class="mx-auto bg-[#a51bf6] w-4 h-2 rounded-full transition duration-200"></div>
+        <div class="mx-auto bg-[#a51bf6] group-hover:w-20 w-10 mt-1.5 h-2 rounded-full transition-all duration-200">
+        </div>
       </h3>
 
-      <div class="grid grid-cols-2 gap-4 mt-4 w-full sm:grid-cols-3 md:grid-cols-4">
+      <div class="grid grid-cols-4 gap-4 mt-4 w-full sm:grid-cols-3 md:grid-cols-4">
         <div
           class="bg-[#1C1C1C] hover:bg-[#232323] transition duration-200 border border-[#393939] rounded-3xl flex items-center justify-center p-4 sm:p-6 md:p-4 lg:p-6"
           title="HTML">
           <img src="Images/Icons/html-5.png" alt="HTML Icon"
-            class="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 lg:w-18 lg:h-18">
+            class="w-10 h-9.5 sm:w-14 sm:h-14 md:w-16 md:h-16 lg:w-18 lg:h-18">
         </div>
         <div
           class="bg-[#1C1C1C] hover:bg-[#232323] transition duration-200 border border-[#393939] rounded-3xl flex items-center justify-center p-4 sm:p-6 md:p-4 lg:p-6"
           title="CSS">
           <img src="Images/Icons/css logo.webp" alt="CSS Icon"
-            class="w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 lg:w-16 lg:h-16">
+            class="w-8 h-8 sm:w-12 sm:h-12 md:w-14 md:h-14 lg:w-16 lg:h-16">
         </div>
         <div
           class="bg-[#1C1C1C] hover:bg-[#232323] transition duration-200 border border-[#393939] rounded-3xl flex items-center justify-center p-4 sm:p-6 md:p-4 lg:p-6"
           title="Tailwind CSS">
           <img src="Images/Icons/tailwind.svg" alt="Tailwind Icon"
-            class="w-10 h-10 sm:w-12 sm:h-12 md:w-16 md:h-16 lg:w-18 lg:h-18">
+            class="w-8 h-8 sm:w-12 sm:h-12 md:w-16 md:h-16 lg:w-18 lg:h-18">
         </div>
         <div
-          class="bg-[#1C1C1C] hover:bg-[#232323] transition duration-200 border border-[#393939] rounded-3xl flex items-center justify-center p-4 sm:p-6 md:p-4 lg:p-8"
+          class="bg-[#1C1C1C] hover:bg-[#232323] transition duration-200 border border-[#393939] rounded-3xl flex items-center justify-center p-4 sm:p-6 md:p-4 lg:p-6"
           title="JavaScript">
           <img src="Images/Icons/javascript.png" alt="JavaScript Icon"
-            class="w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 lg:w-12 lg:h-12">
+            class="w-6.5 h-6 sm:w-12 sm:h-12 md:w-14 md:h-14 lg:w-12 lg:h-12">
         </div>
         <div
           class="bg-[#1C1C1C] hover:bg-[#232323] transition duration-200 border border-[#393939] rounded-3xl flex items-center justify-center p-4 sm:p-6 md:p-4 lg:p-6"
           title="React Js">
           <img src="Images/Icons/react.png" alt="React Icon"
-            class="w-10 h-10 sm:w-12 sm:h-12 md:w-16 md:h-16 lg:w-16 lg:h-16">
+            class="w-8 h-8 sm:w-12 sm:h-12 md:w-16 md:h-16 lg:w-16 lg:h-16">
         </div>
         <div
           class="bg-[#1C1C1C] hover:bg-[#232323] transition duration-200 border border-[#393939] rounded-3xl flex items-center justify-center p-4 sm:p-6 md:p-4 lg:p-4"
           title="Git">
           <img src="Images/Icons/git.png" alt="Git Icon"
-            class="w-10 h-10 sm:w-12 sm:h-12 md:w-16 md:h-16 lg:w-20 lg:h-20">
+            class="w-9 h-9 sm:w-12 sm:h-12 md:w-16 md:h-16 lg:w-20 lg:h-20">
         </div>
         <div
           class="bg-[#1C1C1C] hover:bg-[#232323] transition duration-200 border border-[#393939] rounded-3xl flex items-center justify-center p-4 sm:p-6 md:p-4 lg:p-7"
           title="GitHub">
-          <img src="Images/Icons/github.png" alt="GitHub Icon" class="w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14">
+          <img src="Images/Icons/github.png" alt="GitHub Icon" class="w-6 h-6 sm:w-12 sm:h-12 md:w-14 md:h-14">
         </div>
         <div
           class="bg-[#1C1C1C] hover:bg-[#232323] transition duration-200 border border-[#393939] rounded-3xl flex items-center justify-center p-4 sm:p-6 md:p-4 lg:p-6"
           title="Figma">
-          <img src="Images/Icons/figma.png" alt="Figma Icon" class="w-10 h-10 sm:w-12 sm:h-12 md:w-16 md:h-16">
+          <img src="Images/Icons/figma.png" alt="Figma Icon" class="w-8 h-8 sm:w-12 sm:h-12 md:w-16 md:h-16">
         </div>
       </div>
     </section>
 
 
     <!-- Projects Section -->
-    <section id="projects" class=" px-6 md:px-8 lg:px-36 xl:px-48 pt-2 pb-8 md:mb-[10rem]">
-      <h3 class="text-white text-center font-bold text-2xl md:text-3xl xl:text-4xl pb-8 py-4 sm:py-8">
+    <section id="projects" class=" px-8 md:px-8 lg:px-36 xl:px-48 pt-2 mb-8 md:mb-[10rem]">
+      <h3
+        class="group text-white text-center font-semibold text-2xl md:text-3xl mb-8 transition ease-in-out delay-200 duration-200">
         PROJECTS
-        <div class="mx-auto bg-[#a51bf6] w-4 h-2 rounded-full transition duration-200"></div>
+        <div class="mx-auto bg-[#a51bf6] group-hover:w-20 w-10 mt-1.5 h-2 rounded-full transition-all duration-200">
+        </div>
       </h3>
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
 
         <!-- Project Card 1 -->
         <div
-          class="relative mx-auto overflow-hidden bg-[#1C1C1C] border-2 border-[#393939] rounded-3xl transition-transform hover:scale-105 max-w-sm md:max-w-lg lg:max-w-lg xl:max-w-xl h-[420px] md:h-[420px] lg:h-[450px] xl:h-[480px]">
+          class="relative mx-auto overflow-hidden bg-[#1C1C1C] border-2 border-[#393939] rounded-3xl transition-transform hover:scale-95 hover:shadow-md hover:shadow-[#7b00c3] hover:border-2 hover:border-[#7b00c3] max-w-sm md:max-w-lg lg:max-w-lg xl:max-w-xl h-[420px] md:h-[420px] lg:h-[450px] xl:h-[480px]">
           <div class="w-full overflow-hidden">
             <img src="Images/techtrio.png" alt="techtrio"
               class="w-full h-56 lg:h-64 xl:h-72 object-cover transition-transform duration-500 hover:scale-105">
@@ -258,8 +266,8 @@
           <div class="flex flex-wrap gap-2 p-3">
             <span
               class="px-3 py-1 border-2 border-[#393939] text-gray-400 text-sm rounded-md hover:text-cyan-500 transition-colors">React.js</span>
-              <span
-                class="px-3 py-1 border-2 border-[#393939] text-gray-400 text-sm rounded-md hover:text-yellow-500 transition-colors">JavaScript</span>
+            <span
+              class="px-3 py-1 border-2 border-[#393939] text-gray-400 text-sm rounded-md hover:text-yellow-500 transition-colors">JavaScript</span>
             <span
               class="px-3 py-1 border-2 border-[#393939] text-gray-400 text-sm rounded-md hover:text-cyan-500 transition-colors">Tailwind
               CSS</span>
@@ -277,34 +285,7 @@
         </div>
         <!-- Project Card 2 -->
         <div
-          class="relative mx-auto overflow-hidden bg-[#1C1C1C] border-2 border-[#393939] rounded-3xl transition-transform hover:scale-105 max-w-sm md:max-w-lg lg:max-w-lg xl:max-w-xl h-[420px] md:h-[420px] lg:h-[450px] xl:h-[480px]">
-          <div class="w-full overflow-hidden">
-            <img src="Images/gadzhub.png" alt="GadzHub"
-              class="w-full h-56 lg:h-64 xl:h-72 object-cover transition-transform duration-500 hover:scale-105">
-          </div>
-          <div class="flex flex-wrap gap-2 p-3">
-            <span
-              class="px-3 py-1 border-2 border-[#393939] text-gray-400 text-sm rounded-md hover:text-cyan-500 transition-colors">React.js</span>
-              <span
-                class="px-3 py-1 border-2 border-[#393939] text-gray-400 text-sm rounded-md hover:text-yellow-500 transition-colors">JavaScript</span>
-            <span
-              class="px-3 py-1 border-2 border-[#393939] text-gray-400 text-sm rounded-md hover:text-cyan-500 transition-colors">Tailwind
-              CSS</span>
-            <span
-              class="px-3 py-1 border-2 border-[#393939] text-gray-400 text-sm rounded-md hover:text-purple-500 transition-colors">CSS</span>
-          </div>
-          <div class="px-4 mt-2">
-            <p class="font-bold text-white text-xl text-wrap">GadzHub (A Simple E-Com)</p>
-          </div>
-          <a href="https://gadzhub.netlify.app/" target="_blank" rel="noopener"
-            class="absolute bottom-2 right-2 flex items-center justify-center gap-2 bg-[#7b00c3] hover:bg-[#7200b4] text-white text-sm font-semibold px-4 py-2 rounded-full transition-transform hover:scale-95">
-            <span>Live Demo</span>
-            <img src="Images/Icons/project-link-icon.png" alt="Project Link Icon" class="w-4 h-4">
-          </a>
-        </div>
-        <!-- Project Card 3 -->
-        <div
-          class="relative mx-auto overflow-hidden bg-[#1C1C1C] border-2 border-[#393939] rounded-3xl transition-transform hover:scale-105 max-w-sm md:max-w-lg lg:max-w-lg xl:max-w-xl h-[420px] md:h-[420px] lg:h-[450px] xl:h-[480px]">
+          class="relative mx-auto overflow-hidden bg-[#1C1C1C] border-2 border-[#393939] rounded-3xl transition-transform hover:scale-95 hover:shadow-md hover:shadow-[#7b00c3] hover:border-2 hover:border-[#7b00c3] max-w-sm md:max-w-lg lg:max-w-lg xl:max-w-xl h-[420px] md:h-[420px] lg:h-[450px] xl:h-[480px]">
           <div class="w-full overflow-hidden">
             <img src="Images/hotel-card-image.png" alt="Hotel Management System"
               class="w-full h-56 lg:h-64 xl:h-72 object-cover transition-transform duration-500 hover:scale-105">
@@ -330,9 +311,9 @@
           </a>
         </div>
 
-        <!-- Project Card 4 -->
+        <!-- Project Card 3 -->
         <div
-          class="relative mx-auto overflow-hidden bg-[#1C1C1C] border-2 border-[#393939] rounded-3xl transition-transform hover:scale-105 max-w-sm md:max-w-lg lg:max-w-lg xl:max-w-xl h-[420px] md:h-[420px] lg:h-[450px] xl:h-[480px]">
+          class="relative mx-auto overflow-hidden bg-[#1C1C1C] border-2 border-[#393939] rounded-3xl transition-transform hover:scale-95 hover:shadow-md hover:shadow-[#7b00c3] hover:border-2 hover:border-[#7b00c3] max-w-sm md:max-w-lg lg:max-w-lg xl:max-w-xl h-[420px] md:h-[420px] lg:h-[450px] xl:h-[480px]">
           <div class="w-full overflow-hidden">
             <img src="Images/gemeni-card-image.png" alt="Google Gemini AI Clone"
               class="w-full h-56 lg:h-64 xl:h-72 object-cover transition-transform duration-500 hover:scale-105">
@@ -358,9 +339,9 @@
           </a>
         </div>
 
-        <!-- Project Card 5 -->
+        <!-- Project Card 4 -->
         <div
-          class="relative mx-auto overflow-hidden bg-[#1C1C1C] border-2 border-[#393939] rounded-3xl transition-transform hover:scale-105 max-w-sm md:max-w-lg lg:max-w-lg xl:max-w-xl h-[420px] md:h-[420px] lg:h-[450px] xl:h-[480px]">
+          class="relative mx-auto overflow-hidden bg-[#1C1C1C] border-2 border-[#393939] rounded-3xl transition-transform hover:scale-95 hover:shadow-md hover:border-2 hover:border-[#7b00c3] hover:shadow-[#7b00c3] max-w-sm md:max-w-lg lg:max-w-lg xl:max-w-xl h-[420px] md:h-[420px] lg:h-[450px] xl:h-[480px]">
           <div class="w-full overflow-hidden">
             <img src="Images/whatsapp-card-image.png" alt="WhatsApp Desktop Clone"
               class="w-full h-56 lg:h-64 xl:h-72 object-cover transition-transform duration-500 hover:scale-105">
@@ -385,6 +366,35 @@
             <img src="Images/Icons/project-link-icon.png" alt="Project Link Icon" class="w-4 h-4">
           </a>
         </div>
+
+        <!-- Project Card 5 -->
+        <div
+          class="relative mx-auto overflow-hidden bg-[#1C1C1C] border-2 border-[#393939] rounded-3xl transition-transform hover:scale-95 hover:shadow-md hover:border-2 hover:border-[#7b00c3] hover:shadow-[#7b00c3] max-w-sm md:max-w-lg lg:max-w-lg xl:max-w-xl h-[420px] md:h-[420px] lg:h-[450px] xl:h-[480px]">
+          <div class="w-full overflow-hidden">
+            <img src="Images/gadzhub.png" alt="GadzHub"
+              class="w-full h-56 lg:h-64 xl:h-72 object-cover transition-transform duration-500 hover:scale-105">
+          </div>
+          <div class="flex flex-wrap gap-2 p-3">
+            <span
+              class="px-3 py-1 border-2 border-[#393939] text-gray-400 text-sm rounded-md hover:text-cyan-500 transition-colors">React.js</span>
+            <span
+              class="px-3 py-1 border-2 border-[#393939] text-gray-400 text-sm rounded-md hover:text-yellow-500 transition-colors">JavaScript</span>
+            <span
+              class="px-3 py-1 border-2 border-[#393939] text-gray-400 text-sm rounded-md hover:text-cyan-500 transition-colors">Tailwind
+              CSS</span>
+            <span
+              class="px-3 py-1 border-2 border-[#393939] text-gray-400 text-sm rounded-md hover:text-purple-500 transition-colors">CSS</span>
+          </div>
+          <div class="px-4 mt-2">
+            <p class="font-bold text-white text-xl text-wrap">GadzHub (A Simple E-Com)</p>
+          </div>
+          <a href="https://gadzhub.netlify.app/" target="_blank" rel="noopener"
+            class="absolute bottom-2 right-2 flex items-center justify-center gap-2 bg-[#7b00c3] hover:bg-[#7200b4] text-white text-sm font-semibold px-4 py-2 rounded-full transition-transform hover:scale-95">
+            <span>Live Demo</span>
+            <img src="Images/Icons/project-link-icon.png" alt="Project Link Icon" class="w-4 h-4">
+          </a>
+        </div>
+
       </div>
     </section>
 
@@ -393,10 +403,11 @@
     <section id="contact" class="px-4 md:px-8 lg:px-36 py-8">
       <div class="flex flex-col md:flex-row md:items-start md:justify-between gap-6">
         <div class="flex flex-col mb-6 text-left md:text-left px-3 md:px-0">
-          <h4 class="font-bold text-xl text-white mb-4 md:mb-[1.5rem] group text-center md:text-left">
+          <h4
+            class="font-bold text-xl text-white mb-4 md:mb-[1.5rem] group text-center md:text-left transition ease-in-out delay-200 duration-200">
             Find me on Social
             <div
-              class="mx-auto md:mx-0 bg-[#a51bf6] w-4 group-hover:w-[100px] h-2 rounded-full mt-2 transition duration-200">
+              class="mx-auto md:mx-0 bg-[#a51bf6] w-10 group-hover:w-20 h-2 rounded-full mt-2 transition-all duration-200">
             </div>
           </h4>
           <div class="grid grid-cols-2 gap-2 sm:gap-4">
@@ -434,24 +445,26 @@
         </div>
 
         <div class="w-full md:w-1/2 px-3 md:px-0">
-          <h4 class="font-bold text-xl text-white mb-4 group text-center md:text-left">
+          <h4 class="font-bold text-xl text-white mb-4 group text-center md:text-left transition-all duration-200">
             Get in Touch
             <div
-              class="mx-auto md:mx-0 bg-[#a51bf6] w-4 group-hover:w-[100px] h-2 rounded-full mt-2 transition duration-200">
+              class="mx-auto md:mx-0 bg-[#a51bf6] w-10 group-hover:w-20 h-2 rounded-full mt-2 transition-all duration-200">
             </div>
           </h4>
-          <form class="flex flex-col gap-2">
+          <form id="my-form" action="https://formspree.io/f/xeoarbzv" method="POST" class="flex flex-col gap-2">
             <label class="font-medium">Name</label>
-            <input type="text" placeholder="Your name" required
+            <input type="text" name="name" placeholder="Your name" required
               class="focus:outline-none pl-3 pr-4 py-2 bg-[#1C1C1C] hover:bg-[#232323] rounded-xl border-2 border-[#333] focus:border-[#a51bf6]">
             <label class="font-medium">Email</label>
-            <input type="email" placeholder="Your email" required
+            <input type="email" name="email" placeholder="Your email" required
               class="focus:outline-none pl-3 pr-4 py-2 bg-[#1C1C1C] hover:bg-[#232323] rounded-xl border-2 border-[#333] focus:border-[#a51bf6]">
             <label class="font-medium">Message</label>
-            <textarea rows="4" placeholder="Your message" required
+            <textarea rows="4" name="message" placeholder="Your message" required
               class="resize-none bg-[#1C1C1C] hover:bg-[#232323] text-white text-sm p-2 focus:outline-none rounded-xl border-2 border-[#333] focus:border-[#a51bf6]"></textarea>
-            <button type="submit"
-              class="w-full mt-4 py-2 bg-[#7b00c3] rounded-xl text-white font-medium text-base transition-transform hover:scale-95 active:scale-105">
+            <p id="my-form-status" class="text-sm mt-2 text-center text-green-500"></p>
+
+            <button id="my-form-button" type="submit"
+              class="w-full mt-4 py-2 sm:py-2.5 bg-[#7b00c3] rounded-xl text-white font-medium text-base transition-transform hover:scale-95 active:scale-105">
               Send Your Message
             </button>
           </form>
@@ -474,8 +487,12 @@
   </main>
 
   <script>
+    // Scroll to Top on Page Load
+    window.onload = () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    };
     // Scroll-to-Top Button
-    window.onscroll = function () {
+    window.onscroll = () => {
       const scrollSection = document.getElementById('scrollSection');
       scrollSection.style.display = document.documentElement.scrollTop > 720 ? 'block' : 'none';
     };
@@ -488,7 +505,7 @@
     const menuToggle = document.getElementById('menu-toggle');
     const menuClose = document.getElementById('menu-close');
     const mobileNav = document.getElementById('mobile-nav');
-
+    
     menuToggle.addEventListener('click', function () {
       mobileNav.classList.remove('hidden');
       menuToggle.classList.add('hidden');
@@ -504,14 +521,14 @@
     // Active Navigation Link on Scroll
     const sections = document.querySelectorAll('section, .home');
     const navLinks = document.querySelectorAll('.nav-link');
-
+    
     const observer = new IntersectionObserver(entries => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
           navLinks.forEach(link => {
-            link.classList.remove('underline', 'decoration-4', 'decoration-[#8c05da]');
+            link.classList.remove('underline', 'underline-offset-8', 'decoration-4', 'decoration-[#8c05da]');
             if (link.getAttribute('href') === `#${entry.target.id}`) {
-              link.classList.add('underline', 'decoration-4', 'decoration-[#8c05da]');
+              link.classList.add('underline', 'underline-offset-8', 'decoration-4', 'decoration-[#8c05da]');
             }
           });
         }
@@ -519,6 +536,52 @@
     }, { threshold: 0.5 });
 
     sections.forEach(section => observer.observe(section));
+    
+    const mobileNavLink = document.getElementById('mobile-nav');
+    // Close mobile menu on nav link click (for mobile)
+    navLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        mobileNav.classList.add('hidden');
+        menuClose.classList.add('hidden');
+        menuToggle.classList.remove('hidden');
+      });
+    });
+  </script>
+  <script>
+    let form = document.getElementById("my-form");
+
+    function handleSubmit(event) {
+      event.preventDefault();
+      let status = document.getElementById("my-form-status");
+      let data = new FormData(event.target);
+      fetch(event.target.action, {
+        method: form.method,
+        body: data,
+        headers: {
+          'Accept': 'application/json'
+        }
+      }).then(response => {
+        if (response.ok) {
+          status.innerHTML = "Thanks for your submission! I'll get back to you soon!";
+          form.reset()
+        } else {
+          response.json().then(data => {
+            if (Object.hasOwn(data, 'errors')) {
+              status.innerHTML = data["errors"].map(error => error["message"]).join(", ")
+            } else {
+              status.innerHTML = "Oops! There was a problem submitting your form"
+            }
+          })
+        }
+        setTimeout(() => {
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+          status.innerHTML = '';
+        }, 2000)
+      }).catch(error => {
+        status.innerHTML = "Oops! There was a problem submitting your form"
+      });
+    }
+    form.addEventListener("submit", handleSubmit)
   </script>
 
 </body>
