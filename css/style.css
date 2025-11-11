@@ -1,85 +1,143 @@
+:root {
+  /* Base color and derived shades (from #006eff) */
+  --color-base: #050809;   /* original */
+  --color-light-1: #050809; /* lighter */
+  --color-light-2: #050809; /* slightly lighter */
+  --color-dark-1:  #005dd8; /* medium dark (for corners) */
+  --color-dark-2:  #005dd8; /* deeper dark for subtle depth */
+}
+
+/* Global smooth scrolling */
 html {
-    scroll-behavior: smooth;
-    scroll-padding-top: 5rem;
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
+}
+
+/* Background gradient (light shades with darker top-left + bottom-right) */
+html, body {
+  height: 100%;
+  margin: 0;
+  background-color: var(--color-base);
+  background-image:
+    radial-gradient(circle at 6% 8%, var(--color-dark-1) 0%, transparent 35%),
+    radial-gradient(circle at 94% 92%, var(--color-dark-2) 0%, transparent 35%),
+    linear-gradient(135deg, var(--color-light-1) 0%, var(--color-light-2) 45%, var(--color-base) 100%);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  color: #0b1726;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 /* Custom cursor tracking */
 .cursor-tracking {
-    position: fixed;
-    width: 20px;
-    height: 20px;
-    background-color: #a51bf6;
-    border-radius: 50%;
-    pointer-events: none; /* Ensures it doesn't interfere with clicks */
-    z-index: 1000;
-    
-    /* Centering the cursor */
-    transform: translate(-50%, -50%);
-    
-    /* Smooth movement */
-    transition: left 0.05s linear, top 0.05s linear;
-    
-    /* Performance optimization */
-    will-change: transform;
+  position: fixed;
+  width: 20px;
+  height: 20px;
+  background-color: #00aeff;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 1000;
+  transform: translate(-50%, -50%);
+  transition: left 0.05s linear, top 0.05s linear;
+  will-change: transform;
 }
-
 
 .home {
-    padding-block-start: 1rem;
+  padding-block-start: 1rem;
 }
 
+/* Scrollbar customization */
 ::-webkit-scrollbar {
-    width: 6px;
-    /* height: 6px; */
-    background-color: #fff;
+  width: 6px;
+  background-color: #fff;
 }
 
 ::-webkit-scrollbar-thumb {
-    background-color: #7200b4;
-    border-radius: 20px;
-    /* background-color: #a51bf6; */
+  background-color: #2a86ff77;
+  /* background-color: #006eff; */
+  border-radius: 20px;
 }
 
+/* Glassmorphism Effect */
+nav, .common_glass {
+  background: rgba(28, 28, 28, 0.4); /* semi-transparent dark layer */
+  backdrop-filter: blur(12px) saturate(180%);
+  -webkit-backdrop-filter: blur(12px) saturate(180%);
+  /* border: 1px solid #006eff4d; soft border using main blue */
+  box-shadow: 0 4px 20px rgba(0, 110, 255, 0.15);
+  transition: background 0.3s ease, box-shadow 0.3s ease, border 0.3s ease;
+}
+
+.common_glass_mobile_nav {
+  background: rgba(28, 28, 28, 0.897); /* semi-transparent dark layer */
+  backdrop-filter: blur(12px) saturate(180%);
+  -webkit-backdrop-filter: blur(12px) saturate(180%);
+  /* border: 1px solid #006eff4d; soft border using main blue */
+  box-shadow: 0 4px 20px rgba(0, 110, 255, 0.15);
+  transition: background 0.3s ease, box-shadow 0.3s ease, border 0.3s ease;
+}
+
+/* Hover enhancement — slightly brighter and more glassy */
+
+
+/* Optional — smooth link transition to feel consistent */
+nav a {
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+/* Optional — subtle hover lift on nav links */
+nav a:hover {
+  color: #00a5ff;
+  transform: translateY(-1px);
+}
+
+
+/* Social icons hover effects */
 .social-icons {
-    box-shadow: 0 0px 4px #a51bf6;
+  box-shadow: 0 0px 4px #006eff;
 }
 
 .social-icons:hover {
-    box-shadow: 2px 4px 10px #a51bf6;
+  box-shadow: 2px 4px 10px #006eff;
 }
 
-.submit-btn:hover, .more-btn:hover {
-    box-shadow: 0 0px 2px #a51bf6;
+.submit-btn:hover,
+.more-btn:hover {
+  box-shadow: 0 0px 2px #006eff;
 }
 
 .resume:hover {
-    box-shadow: 0 0px 4px #a51bf6;
+  box-shadow: 0 0px 4px #006eff;
 }
 
+/* Hide text on hover (your selector may need adjustment) */
 .bg-black:hover p,
 h5 {
-    display: hidden;
-    top: -400px;
+  display: hidden;
+  top: -400px;
 }
 
 .scrollToTop {
-    display: none;
+  display: none;
 }
 
-input::placeholder, textarea::placeholder {
-    color: #797979;
+input::placeholder,
+textarea::placeholder {
+  color: #797979;
 }
 
-/* Select only the div children inside .tech___stack___home */
+/* Tech stack animation */
 .tech___stack___home > div {
-    animation: scaleSequence 6s infinite;
+  animation: scaleSequence 6s infinite;
 }
 
 /* Keyframes to scale only one child at a time */
 @keyframes scaleSequence {
-    0%, 16.66% { transform: scale(1); } /* Default state */
-    8.33% { transform: scale(1.2); } /* Scale one child at a time */
-    25%, 100% { transform: scale(1); } /* Reset scale */
+  0%, 16.66% { transform: scale(1); }
+  8.33% { transform: scale(1.2); }
+  25%, 100% { transform: scale(1); }
 }
 
 /* Apply animation delay per div */
@@ -88,17 +146,10 @@ input::placeholder, textarea::placeholder {
 .tech___stack___home > div:nth-child(4) { animation-delay: 2s; }
 .tech___stack___home > div:nth-child(5) { animation-delay: 3s; }
 .tech___stack___home > div:nth-child(6) { animation-delay: 4s; }
-/* 
-.tech-icon {
-    @apply bg-[#1C1C1C] hover:bg-[#232323] border border-[#393939] rounded-xl 
-           p-3 md:p-4 flex items-center justify-center transition-all;
-  }
-  
-  .tech-icon img {
-    @apply w-8 h-8 md:w-10 md:h-10 object-contain;
-  }
 
-  .project-card {
-    @apply bg-[#1C1C1C] border-2 border-[#393939] rounded-2xl overflow-hidden 
-           transition-transform hover:scale-[1.02] h-full flex flex-col;
-  } */
+/* Accessibility: disable fixed bg for users with reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  body {
+    background-attachment: scroll;
+  }
+}
